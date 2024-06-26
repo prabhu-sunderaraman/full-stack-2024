@@ -24,6 +24,40 @@
 * Integrated Development Environment
 * Visual Studio Code, IntelliJ, Eclipse
 
+#### JavaScript
+
+* JavaScript is a programming language
+* In the early 2000s JavaScript was used only for **frontend**
+* ie., Code needed a browser for execution
+* All this changed in the early 2010s
+* Google released a standalone javascript engine that you can install in your machine
+* NodeJS
+* Write JS code and run it using nodejs
+
+```
+	node sample.js
+```
+
+* NodeJS made Javascript a **backend** language as well
+
+* **"Fullstack"** evolved
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 * Middleware
 * Backend
