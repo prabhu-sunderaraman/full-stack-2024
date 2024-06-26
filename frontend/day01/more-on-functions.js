@@ -31,7 +31,7 @@ sleep();
 
 
 //A function can be invoked with ANY number of arguments irrespective of the way it's defined
-function play() {
+function play(sport1, sport2) {
     console.log("Playing");
 }
 
