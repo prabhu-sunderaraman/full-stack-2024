@@ -1,3 +1,4 @@
+//polyglot developer or programmer
 //... rest operator
 function add(... numbers) {
     // console.log(numbers);
@@ -24,6 +25,8 @@ function greatest(... values) {
 add("a",1,5,34,324,324,235,2353);
 add(21,65);
 add(1,55,83);
+let numbers = [12, 34, 55, 66, 7, 89];
+add(... numbers);
 
 greatest(1,5,34,324,324,235,2353);
 greatest(21,65);
