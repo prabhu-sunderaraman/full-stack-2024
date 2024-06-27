@@ -1,4 +1,4 @@
-function add() {
+const add = function() {
     let sum = 0;
     for(let i = 0; i < arguments.length; i++) {
         if(typeof(arguments[i]) === "number") {
@@ -8,7 +8,7 @@ function add() {
     console.log("Sum", sum);
 }
 
-function greatest() {
+const greatest = function() {
     let max = arguments.length > 0 ? arguments[0] : null;
     for(let i = 1; i < arguments.length; i++) {
         if(typeof(arguments[i] === "number")) {
