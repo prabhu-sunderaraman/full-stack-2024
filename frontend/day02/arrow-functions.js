@@ -15,3 +15,19 @@ console.log(add(10, 20));
 
 const divide = (a, b) => a / b;
 const square = (a) => a * a;
+
+// const multiply = function(a, b) {
+//     return a * b;
+// };
+const multiply = (a, b) => a * b;
+
+const aPluBWholeSquared = (a, b) => {
+    let aSquared = a * a;
+    let bSquared = b * b;
+    return aSquared + bSquared + (2 * a * b);
+};
+
+
+
+
+
