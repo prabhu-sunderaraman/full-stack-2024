@@ -1,4 +1,5 @@
 function work() {
+    // console.log(arguments[2]);
     //keyword arguments
     console.log("working", arguments);
     for(let i = 0; i < arguments.length; i++) {
