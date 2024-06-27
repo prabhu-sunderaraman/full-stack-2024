@@ -8,11 +8,11 @@ function math(logic) {
 }
 
 const add = function(x, y) {
-    console.log(a + y);
+    console.log(x + y);
 }
 
 const multiply = function(x, y) {
-    console.log(a * y);
+    console.log(x * y);
 }
 
 math(add);
