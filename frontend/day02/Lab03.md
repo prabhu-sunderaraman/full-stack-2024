@@ -6,7 +6,7 @@
 
 
 * Print all the numbers (*Use forEach*)
-* Print the sum of all numbers (*Use map*)
+* Print the sum of all numbers (*Use reduce*)
 * Print the first odd number (*Use find*)
 * Generate an list of squares of all numbers (*Use map*)
 * Generate a list of numbers divisible by 5.  (*Use filter*)
