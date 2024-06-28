@@ -5,14 +5,17 @@ class Calculator {
     add(n1, n2) {
         let result = n1 + n2;
         this.listOfOperations.push(`Sum of ${n1} and ${n2} is ${result}`)
+        return result;
     }
     subtract(n1, n2) {
         let result = n1 - n2;
         this.listOfOperations.push(`Subtraction of ${n1} and ${n2} is ${result}`)
+        return result;
     }
     multiply(n1, n2) {
         let result = n1 * n2;
         this.listOfOperations.push(`Product of ${n1} and ${n2} is ${result}`)
+        return result;
     }
     fetch() {
         return this.listOfOperations
