@@ -13,7 +13,51 @@
 # Part II
 
 * You will build an UI that uses the Calculator class defined in Part I
-* **WILL BE DISCUSSED LATER**
+* Create **calculator.html** in  **[frontend-app]** folder
+* Start with the following HTML code
+
+``` html
+<html>
+	<head>
+		<script src="calculator.js">
+		<script>
+			const calc = new Calculator();
+			
+			const addButtonClicked = () => {
+				const num1 = document.getElementById("num1").value;
+				const num2 = document.getElementById("num1").value;
+				const result = calc.add(num1, num2);
+				document.getElementById("result").innerHTML = result;
+			};
+			// Implement subtractButtonClicked, multiplyButtonClicked, fetchButtonClicked, clearButtonClicked functions
+			// YOUR CODE GOES HERE
+		</script>			
+	</head>
+	<body>
+		<p>	
+			<input type="number" id="num1" placeholder="Number 1"><br/>
+			<input type="number" id="num2" placeholder="Number 2"><br/>
+		</p>
+		<p>		
+			<button onclick="addButtonClicked();">Add</button>
+			<button>Subtract</button>		 	
+			<button>Multiply</button>
+		</p>
+		<p>
+			<h4 id="result"></h4>
+		</p>
+		<hr/>
+		<p>
+			<button>Fetch all results</button>
+			<div id="all"></div>
+		</p>
+		<p>
+			<button>Clear</button>
+		</p>		
+	</body>			
+</html>
+
+```
 
 
 ## Part III
