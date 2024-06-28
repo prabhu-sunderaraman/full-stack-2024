@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<script src="calculator.js"></script>
+		<script>
+			const calc = new Calculator();
+			
+            // DOM
+            // In UI(html) if you want to access any element document.getElementById("<id>")
+            // input elements -> .value to access the value
+            // output elements -> .innerHTML to access the text or html
+
+			const addButtonClicked = () => {
+				const num1 = parseInt(document.getElementById("num1").value);
+				const num2 = parseInt(document.getElementById("num2").value);
+				const result = calc.add(num1, num2);
+				document.getElementById("result").innerHTML = result;
+			};
+
+            const subtractButtonClicked = () => {
+				const num1 = parseInt(document.getElementById("num1").value);
+				const num2 = parseInt(document.getElementById("num2").value);
+				const result = calc.subtract(num1, num2);
+				document.getElementById("result").innerHTML = result;
+			};
+
+            const multiplyButtonClicked = () => {
+				const num1 = parseInt(document.getElementById("num1").value);
+				const num2 = parseInt(document.getElementById("num2").value);
+				const result = calc.multiply(num1, num2);
+				document.getElementById("result").innerHTML = result;
+			};
+
+            const fetchButtonClicked = () => {
+                document.getElementById("all").innerHTML = "";
+				const results = calc.fetch();
+                results.forEach(item => {
+                    document.getElementById("all").innerHTML += item + "<br/>";    
+                });
+			};
+
+            const clearButtonClicked = () => {
+                calc.clear();
+				document.getElementById("all").innerHTML = '';
+                document.getElementById("result").innerHTML = '';
+                document.getElementById("num1").value = '';
+                document.getElementById("num2").value = '';
+			};
+
+            const num1ValueChanged = () => {
+                // let num1 = document.getElementById("num1").value;
+                // document.getElementById("addBtn").style.disabled = "";
+                // if(num1 !== '') {
+                //     //document.getElementById("addBtn").disabled = "";
+                // }
+
+            }
+
+			// Implement subtractButtonClicked, multiplyButtonClicked, fetchButtonClicked, clearButtonClicked functions
+			// YOUR CODE GOES HERE
+		</script>			
+	</head>
+	<body>
+		<p>	
+			<input type="number" id="num1" placeholder="Number 1" onchange="num1ValueChanged()"><br/>
+			<input type="number" id="num2" placeholder="Number 2" onchange="num2ValueChanged()"><br/>
+		</p>
+		<p>		
+			<button onclick="addButtonClicked();" id="addBtn">Add</button>
+			<button onclick="subtractButtonClicked();" id="subtractBtn">Subtract</button>		 	
+			<button onclick="multiplyButtonClicked();" id="multiplyBtn">Multiply</button>
+		</p>
+		<p>
+			<h4 id="result"></h4>
+		</p>
+		<hr/>
+		<p>
+			<button onclick="fetchButtonClicked();">Fetch all results</button>
+			<div id="all"></div>
+		</p>
+		<p>
+			<button onclick="clearButtonClicked();">Clear</button>
+		</p>		
+	</body>			
+</html>
