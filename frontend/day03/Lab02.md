@@ -24,8 +24,8 @@
 			const calc = new Calculator();
 			
 			const addButtonClicked = () => {
-				const num1 = document.getElementById("num1").value;
-				const num2 = document.getElementById("num1").value;
+				const num1 = parseInt(document.getElementById("num1").value);
+				const num2 = parseInt(document.getElementById("num1").value);
 				const result = calc.add(num1, num2);
 				document.getElementById("result").innerHTML = result;
 			};
