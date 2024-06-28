@@ -19,7 +19,7 @@
 ``` html
 <html>
 	<head>
-		<script src="calculator.js">
+		<script src="calculator.js"></script>
 		<script>
 			const calc = new Calculator();
 			
@@ -58,7 +58,4 @@
 </html>
 
 ```
-
-
-## Part III
 
