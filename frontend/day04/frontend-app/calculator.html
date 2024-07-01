@@ -8,18 +8,83 @@
             // output elements -> .innerHTML to access the text or html
 
 			const addButtonClicked = () => {
+				let num1 = parseInt(document.getElementById("num1").value);
+				let num2 = parseInt(document.getElementById("num2").value);
+				let backendUrl = `http://localhost:8080/calc/add/${num1}/${num2}`;
+
+				fetch(backendUrl, {
+					method: "GET"
+				})
+				.then(response => response.text())
+				.then(textValue => document.getElementById("result").innerHTML = textValue);
 			};
 
             const subtractButtonClicked = () => {
+				let num1 = parseInt(document.getElementById("num1").value);
+				let num2 = parseInt(document.getElementById("num2").value);
+				let backendUrl = `http://localhost:8080/calc/subtract/${num1}/${num2}`;
+
+				fetch(backendUrl, {
+					method: "GET"
+				})
+				.then(response => response.text())
+				.then(textValue => document.getElementById("result").innerHTML = textValue);
 			};
 
             const multiplyButtonClicked = () => {
+				let num1 = parseInt(document.getElementById("num1").value);
+				let num2 = parseInt(document.getElementById("num2").value);
+				let backendUrl = `http://localhost:8080/calc/multiply/${num1}/${num2}`;
+
+				fetch(backendUrl, {
+					method: "GET"
+				})
+				.then(response => response.text())
+				.then(textValue => document.getElementById("result").innerHTML = textValue);
 			};
 
-            const fetchButtonClicked = () => {
+            const oldFetchButtonClicked = () => {
+				let backendUrl = `http://localhost:8080/calc/fetch`;
+
+				fetch(backendUrl, {
+					method: "GET"
+				})
+				.then(response => response.text())
+				.then(textValue => {
+					let items = textValue.split(",");
+					items.forEach(item => {
+						document.getElementById("all").innerHTML += `${item} <br/>`;
+					});
+				});
 			};
+
+			const fetchButtonClicked = () => {
+				let backendUrl = `http://localhost:8080/calc/all`;
+
+				fetch(backendUrl, {
+					method: "GET"
+				})
+				.then(response => response.json())
+				.then(items => {
+					items.forEach(item => {
+						document.getElementById("all").innerHTML += `${item} <br/>`;
+					});
+				});
+			};
+
 
             const clearButtonClicked = () => {
+				let backendUrl = `http://localhost:8080/calc/clear`;
+
+				fetch(backendUrl, {
+					method: "POST"
+				})
+				.then(response => response.text())
+				.then(value => {
+					document.getElementById("result").innerHTML = '';
+					document.getElementById("all").innerHTML = '';
+				});
+				
 			};
 		</script>			
 	</head>

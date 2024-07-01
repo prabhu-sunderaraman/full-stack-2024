@@ -36,6 +36,11 @@ app.get("/calc/fetch", (req, res) => {
     res.end(`${results.join()}`);
 });
 
+app.get("/calc/all", (req, res) => {
+    let results = calc.fetch();
+    res.json(results);
+});
+
 app.post("/calc/clear", (req, res) => {
 	calc.clear();
 	res.end("Results cleared");
