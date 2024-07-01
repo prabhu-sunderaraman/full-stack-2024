@@ -21,3 +21,30 @@ const getCities = async () => {
 }
 
 ```
+
+* If you want to design your own asynchronous style code, Promises come into picture
+
+#### Fetching data from Backend
+
+* You can use fetch API, axios API etc., for fetching data from backend 
+* fetch is built-in. You don't have to install/configure anything extra to work with fetch API
+* AJAX -> Asynchronous JavaScript and XML
+* fetch is a way to send AJAX request;
+* XML in Ajax is outdated; It's still called AJAX but people hardly use XML formatted data;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
