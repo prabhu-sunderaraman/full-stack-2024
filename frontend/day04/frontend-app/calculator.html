@@ -7,16 +7,20 @@
             // input elements -> .value to access the value
             // output elements -> .innerHTML to access the text or html
 
-			const addButtonClicked = () => {
+			const addButtonClicked = async () => {
 				let num1 = parseInt(document.getElementById("num1").value);
 				let num2 = parseInt(document.getElementById("num2").value);
 				let backendUrl = `http://localhost:8080/calc/add/${num1}/${num2}`;
 
-				fetch(backendUrl, {
+				await fetch(backendUrl, {
 					method: "GET"
 				})
 				.then(response => response.text())
-				.then(textValue => document.getElementById("result").innerHTML = textValue);
+				.then(textValue => {
+					console.log("****ADD result received*****", textValue);
+					document.getElementById("result").innerHTML = textValue;
+				});
+				console.log("====== AFTER FETCHING VALUE from BACKEND ======");
 			};
 
             const subtractButtonClicked = () => {
