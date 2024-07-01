@@ -33,7 +33,27 @@ const getCities = async () => {
 * XML in Ajax is outdated; It's still called AJAX but people hardly use XML formatted data;
 
 
+### React JS
 
+* Why React?
+* Javascript frameworks - Need?
+
+* What do they provide? -? 
+* They provide readymade functionalities that you can use in your code
+* They provide a structure and modularity to your code
+* They provide custom UI components
+* They provide tools to improve performance
+* They provide debugging facilities
+
+* Angular (irctc), React (Facebook, BookMyShow), Vue, Ember
+* One of the main reasons React is used is "Performance"
+* React provides Virtual DOM
+* You use React JS when your UI is very complicated with a lot of components and changes happenning very frequently
+* https://react.dev/ 
+* v18.x.x
+* React can be used to build Frontend applications for web and mobile
+* React Native is used for Mobile
+* You can develop frontend applications in React using JS or TypeScript
 
 
 
