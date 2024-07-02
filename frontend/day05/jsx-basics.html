@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+        <script type="text/jsx">
+            //JSX enforces strict syntax;
+            //Every start tag SHOULD have a corresponding end tag
+            
+            const tb = <input type="text"></input>;
+            
+            //myForm component
+            const myForm = (<div>
+                <input type="text"></input>
+                <br/>
+                <button>Click</button>
+            </div>);
+
+            const root = ReactDOM.createRoot(document.getElementById("indium"));
+            root.render(myForm);
+           
+        </script>
+    </head>
+    <body>
+        <div id="indium"></div>
+        <!-- <input type="text"> -->
+    </body>
+</html>

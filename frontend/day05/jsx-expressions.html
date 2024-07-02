@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+        <script type="text/jsx">
+            const now = () => {
+                return new Date().toISOString();
+            };
+            const message = "Hello, how are you?"
+            const cities = ["Chennai", "Pune", "Kochi"];
+
+            const heading = <h1>{message}</h1>;   
+            const time = <p>It's <b>{now()}</b> now</p>;
+            /*
+            const list = (<ul>
+                <li>Chennai</li>
+                <li>Pune</li>
+                <li>Kochi</li>
+            </ul>);
+            */
+            const list = (<ul style={{color: 'blue', fontWeight: 'bold'}}>
+                {
+                    cities.map(city => <li>{city}</li>)
+                }
+            </ul>);
+
+
+            const root = ReactDOM.createRoot(document.getElementById("indium"));
+            root.render(list);
+           
+        </script>
+    </head>
+    <body>
+        <div id="indium"></div>
+    </body>
+</html>

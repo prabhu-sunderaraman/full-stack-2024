@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/jsx">
+             
+            const h1 = <h1>This is a react element</h1>; //JSX syntax
+            const para1 = <p>This is a paragraph created using JSX</p>; //JSX syntax
+
+             //JSX syntax
+            const myUI = (<div>
+                <h1>This is a react element</h1>
+                <p>This is a paragraph created using JSX</p>
+            </div>); 
+
+             const root = ReactDOM.createRoot(document.getElementById("indium"));
+             root.render(myUI);
+
+             //root.render(h1);
+             //root.render(para1);
+        </script>
+    </head>
+    <body>
+        <div id="indium"></div>
+        <!-- <h1>This is react page</h1>
+        <p>Hello there!</p> -->
+    </body>
+</html>
