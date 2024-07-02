@@ -4,7 +4,7 @@
 
 ``` javascript
 let cart = [
-	{ "item": "Veg Hot & Sour Soup", "quantity": 1, "unitPrice": 89 },
+	{ "item": "Veg Hot & Sour Soup", "quantity": 2, "unitPrice": 89 },
 	{ "item": "Veg Lung Fung Soup", "quantity": 1, "unitPrice": 89 },
 	{ "item": "Veg Manchow Soup", "quantity": 1, "unitPrice": 89 },
 	{ "item": "Veg Sweet Corn Soup", "quantity": 1, "unitPrice": 89 }		
