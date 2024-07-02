@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <style>
+            .soup {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 350px;
+                border: 1px solid gray;
+                padding: 1px;
+            }
+            .soupLabel {
+                font-size: medium;
+                color: green;
+                padding-right: 40px;
+                margin-left: 10px;
+            }
+            .soupQuantity {
+                padding: 40px 0px 40px 0px;
+                margin-bottom: 50px; 
+            }
+            .soupPrice {
+                padding: 40px 0px 40px 0px;
+                margin-left: 10px;
+                margin-bottom: 50px;
+            }
+            button {
+            }
+        </style>
+        <script type="text/jsx">
+            let cart = [
+                { "item": "Veg Hot & Sour Soup", "quantity": 2, "unitPrice": 89 },
+                { "item": "Veg Lung Fung Soup", "quantity": 1, "unitPrice": 89 },
+                { "item": "Veg Manchow Soup", "quantity": 1, "unitPrice": 89 },
+                { "item": "Veg Sweet Corn Soup", "quantity": 1, "unitPrice": 89 }		
+            ]; 
+
+            const getSoupItem = (soup) => {
+                return (<div key={soup.item} className="soup">
+                    <label className="soupLabel">{soup.item}</label>
+                    <div className="soupQuantity">{soup.quantity}</div>
+                    <div className="soupPrice">
+                        <label>{soup.unitPrice}</label>
+                    </div>
+                    <div>
+                        <button>+</button>
+                    </div>
+                </div>);
+            }
+            
+            const soupMenu = (<div>
+                <h1>Soup</h1>
+                {
+                    cart.map(item => getSoupItem(item))
+                }
+            </div>);
+
+
+             const root = ReactDOM.createRoot(document.getElementById("root"));
+             root.render(soupMenu);
+
+        </script>
+    </head>
+    <body>
+        <div id="root"></div>
+    </body>
+</html>
