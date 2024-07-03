@@ -4,8 +4,16 @@
 		<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
         <script type="text/jsx">
-            const MyHeader = () => {
+
+            //All react components should begin with Uppercase.
+            //Or else react assumes that it's a built-in HTML component and will not evaluate it
+            function Cool() {
+                return (<p>Cool</p>);
+            }
+
+            function MyHeader() {
                 return (<div>
+                    <Cool/>
                     <h3>Functional style</h3>
                 </div>);
             };
