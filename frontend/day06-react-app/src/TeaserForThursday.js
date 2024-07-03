@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+//Model-View-Controller (MVC pattern)
 const TeaserForThursday = () => {
     let now = 'current time' //WON'T UPDATE THE UI
 
