@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/jsx">
+
+            class MyHeader extends React.Component {
+                render() {
+                    return (<div>
+                        <h1>React Component page</h1>
+                    </div>);
+                }
+            }
+
+            class MyFooter extends React.Component {
+                render() {
+                    return <h6>Copyrights reserved, {new Date().getFullYear()}.</h6>
+                }
+            }
+
+            class LoginForm extends React.Component {
+                usernameValueChanged(e) {
+                    console.log(e.target.value);
+                }
+                loginButtonClicked() {
+                    console.log("Login Button clicked")
+                };
+                render() {
+                    return (
+                        <div>
+                            <MyHeader/>
+                            <hr/>
+                            <input type="text" placeholder="username" onChange={this.usernameValueChanged}/>
+                            <br/>
+                            <button onClick={this.loginButtonClicked}>Login</button>
+                            <br/><br/><br/><br/><br/><br/>
+                            <hr/>
+                            <MyFooter/>
+                        </div>
+                    );
+                }
+            }
+
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(<LoginForm/>);
+
+/*
+            const usernameValueChanged = (e) => {
+                console.log(e.target.value);
+            }
+
+            const loginButtonClicked = () => {
+                console.log("Login Button clicked")
+            };
+
+            const loginForm = (<div>
+                    <input type="text" placeholder="username" onChange={usernameValueChanged}/>
+                    <br/>
+                    <button onClick={loginButtonClicked}>Login</button>
+            </div>);
+*/
+           
+        </script>
+    </head>
+    <body>
+        <div id="root"></div>
+    </body>        
+</html>    

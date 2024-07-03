@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/jsx">
+            const MyHeader = () => {
+                return (<div>
+                    <h3>Functional style</h3>
+                </div>);
+            };
+
+            const MyFooter = () => {
+                return <h6>Copyrights reserved, {new Date().getFullYear()}</h6>;
+            }
+
+            const LoginForm = () => {
+                const usernameValueChanged = (e) => {
+                    console.log(e.target.value);
+                }
+    
+                const loginButtonClicked = () => {
+                    console.log("Login Button clicked")
+                };
+
+                return (<div>
+                    <MyHeader/>
+                    <hr/>
+                    <input type="text" placeholder="username" onChange={usernameValueChanged}/>
+                    <br/>
+                    <button onClick={loginButtonClicked}>Login</button>
+                    <br/><br/><br/><br/>
+                    <hr/>
+                    <MyFooter/>
+            </div>);
+            }
+
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(<LoginForm/>);
+        </script>
+    </head>
+    <body>
+        <div id="root"></div>
+    </body>        
+</html>    
