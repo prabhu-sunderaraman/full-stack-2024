@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/jsx">
+
+            let username = '';
+            let password = '';
+
+            const usernameValueChanged = (e) => {
+                username = e.target.value;
+            };
+
+            const passwordValueChanged = (e) => {
+                password = e.target.value;
+            };
+
+            const loginButtonClicked = (e) => {
+                
+                document.getElementById("success").innerHTML = "";
+                document.getElementById("failure").innerHTML = "";
+                if(username === 'admin' && password === 'admin123') {
+                    //NOT RECOMMENDED because you will have to use state
+                    document.getElementById("success").innerHTML = "Logging in...";
+                    e.target.disabled = true;
+                } else {
+                    //NOT RECOMMENDED because you will have to use state
+                    document.getElementById("failure").innerHTML = "Username or Password is incorrect";
+                }    
+            };
+
+            
+            const resetButtonClicked = () => {
+                //NOT RECOMMENDED because you will have to use state
+                document.getElementById("success").innerHTML = "";
+                document.getElementById("failure").innerHTML = "";
+                username = "";
+                password = "";
+            }
+         
+            const loginForm = (<div style={{margin: '10px', padding: '10px'}}>
+                <input type="text" placeholder="Username" onChange={usernameValueChanged}/> 
+                <br/>
+                <input type="password" placeholder="Password" onChange={passwordValueChanged}/>
+                <br/> <br/>
+                <div>
+                    <button style={{backgroundColor: 'green'}} onClick={loginButtonClicked}>Login</button>
+                    <button style={{color: 'red'}} onClick={resetButtonClicked}>Reset</button>
+                </div>
+                <h5 id="success" style={{color: 'blue'}}></h5>
+                <h5 id="failure" style={{color: 'red'}}></h5>
+            </div>);
+
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(loginForm);
+        </script>
+    </head>
+    <body>
+        <div id="root"></div>
+    </body>
+</html>
