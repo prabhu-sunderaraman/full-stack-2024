@@ -45,24 +45,14 @@
                 document.getElementById("num1").value = '';
                 document.getElementById("num2").value = '';
 			};
-
-            const num1ValueChanged = () => {
-                // let num1 = document.getElementById("num1").value;
-                // document.getElementById("addBtn").style.disabled = "";
-                // if(num1 !== '') {
-                //     //document.getElementById("addBtn").disabled = "";
-                // }
-
-            }
-
 			// Implement subtractButtonClicked, multiplyButtonClicked, fetchButtonClicked, clearButtonClicked functions
 			// YOUR CODE GOES HERE
 		</script>			
 	</head>
 	<body>
 		<p>	
-			<input type="number" id="num1" placeholder="Number 1" onchange="num1ValueChanged()"><br/>
-			<input type="number" id="num2" placeholder="Number 2" onchange="num2ValueChanged()"><br/>
+			<input type="number" id="num1" placeholder="Number 1"><br/>
+			<input type="number" id="num2" placeholder="Number 2"><br/>
 		</p>
 		<p>		
 			<button onclick="addButtonClicked();" id="addBtn">Add</button>
