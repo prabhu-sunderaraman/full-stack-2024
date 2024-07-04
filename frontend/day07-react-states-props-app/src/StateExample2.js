@@ -1,7 +1,18 @@
 import { useState } from "react";
 
 const StateExample2 = () => {
+    //UI gets automatically refreshed when you modify the state
+    //This StateExample2() function gets called everytime you modify the state
+    
+    //When you update the state;
+    //the component is rendered again
+    //ie., a new Virtual DOM tree is constructed
+    //React compares the new Virtual DOM tree with the previous Virtual DOM tree
+    //Only if there are changes, it goes and updates the real DOM tree
+    //After updation, it destroys the previous Virtual DOM tree
+    
 
+    console.log("*** RENDERED ***");
     const [message, setMessage] = useState('Hi');
     const [name, setName] = useState('');
     //let name = ''; //WEIRD behaviour
