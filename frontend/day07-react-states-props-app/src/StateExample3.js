@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-//APPROACH 3
+//APPROACH 2
 const StateExample3 = () => {
 
     const [calc, setCalc] = useState({
