@@ -8,7 +8,7 @@ US -> NJ, NY, Houston
 England -> London, Bristol, Hampshire
 ```
 
-* You can design the states the way you want!
+* You can design the **state of the component** the way you want!
 
 
 #### Part I
