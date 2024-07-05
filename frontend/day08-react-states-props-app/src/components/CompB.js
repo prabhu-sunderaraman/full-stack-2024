@@ -1,6 +1,6 @@
-const CompB = () => {
+const CompB = ({message}) => {
     return (<div>
-        <p></p>
+        <p>{message}</p>
     </div>);
 };
 
