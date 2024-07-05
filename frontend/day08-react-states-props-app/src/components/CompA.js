@@ -1,7 +1,8 @@
 const CompA = ({parentPhoneNumber}) => {
     
     const getTimeButtonClicked = () => {
-        parentPhoneNumber();
+        let currentTime = new Date().toTimeString();
+        parentPhoneNumber(currentTime);
     };
 
     return (<div>

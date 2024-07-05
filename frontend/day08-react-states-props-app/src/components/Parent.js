@@ -5,9 +5,10 @@ import {useState} from 'react';
 const Parent = () => {
     const [currentTime, setCurrentTime] = useState();
 
-    const callMe = () => {
+    const callMe = (value) => {
         console.log("Parent called");
-        setCurrentTime(new Date().toTimeString());
+        //setCurrentTime(new Date().toTimeString());
+        setCurrentTime(value);
     }
     return (<div>
         <CompA parentPhoneNumber={callMe}/>
