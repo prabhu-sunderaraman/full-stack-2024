@@ -1,0 +1,28 @@
+{
+    "countries": [
+        {
+            "name": "India",
+            "cities": [
+                "Pune",
+                "Chennai",
+                "Kochi"
+            ]
+        },
+        {
+            "name": "US",
+            "cities": [
+                "NJ",
+                "NY",
+                "Houston"
+            ]
+        },
+        {
+            "name": "England",
+            "cities": [
+                "London",
+                "Bristol",
+                "Hampshire"
+            ]
+        }
+    ]
+}
