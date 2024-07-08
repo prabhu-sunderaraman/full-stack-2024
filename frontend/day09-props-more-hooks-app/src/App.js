@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import {MyPanel} from './propsExample1/MyPanel';
 import { Lab01 } from './lab01/Lab01';
+import { MyPanel } from './contextExample/MyPanel';
 
 function App() {
   return (
     <div className="App">
-      <Lab01 url={'./covidData.json'}/>
+      <MyPanel/>
     </div>
   );
 }
