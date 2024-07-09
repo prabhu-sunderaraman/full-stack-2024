@@ -3,6 +3,7 @@
 export const GeoReducer = (countries, action) => {
     switch (action.type) {
         case 'COUNTRY_ADDED':
+            console.log('COUNTRY_ADDED');
             let countryToBeAdded = action.country;
             let existingCountry = countries.find(item => item === countryToBeAdded);    
             if(!existingCountry) {
