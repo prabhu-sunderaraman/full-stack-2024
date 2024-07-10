@@ -1,23 +1,20 @@
-import { NavLink, Outlet } from "react-router-dom";
+import {Outlet } from "react-router-dom";
+import MainNavBar from "./MainNavBar";
+import Footer from "./Footer";
+import logo from '../assets/images/logo.svg';
 
 const MainLayout = () => {
     return (<div>
         <header>
-            <h1>Midweek react app</h1>
-            <ul className='layoutList'>
-                <li><NavLink to='/'>Home</NavLink></li>
-                <li><NavLink to='/labs'>Labs</NavLink></li>
-                <li><NavLink to='/contact'>Contact us</NavLink></li>
-            </ul>
+            <img src={logo} width='100px' height='100px'></img>
+            <MainNavBar/>
         </header>    
         <hr/>
         <main>
             <Outlet/>
         </main> 
         <hr/>
-        <footer>
-            <p>Copyrights reserved, 2024</p>
-        </footer>
+        <Footer/>
 
     </div>);
 };
