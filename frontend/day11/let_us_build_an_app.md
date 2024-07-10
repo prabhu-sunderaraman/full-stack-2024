@@ -37,5 +37,8 @@
                 -- GuessingGame.test.js
    -- [utils]  
 
-
 ```
+
+### Part III
+
+* Define MainLayout.js

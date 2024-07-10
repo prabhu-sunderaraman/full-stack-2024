@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+.layoutList {
+  list-style: none;
+}
+
+.layoutList li {
+  display: inline;
+  padding: 10px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -32,6 +41,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
