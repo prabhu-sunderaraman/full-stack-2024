@@ -44,3 +44,18 @@
 * Define MainLayout.js
 * Define PublicRoutes
 * Render them in App.js
+
+### Part IV
+
+* The links Lab01, Lab02 are very suffocating in the main layout. Because you cannot add more labs.
+* So let's change it to **Labs**
+* Clicking on Labs will render links to Lab01 and Lab02 in the main content.
+* **Hint:** define LabsLayout with children Lab01 and Lab02 and connect with the main layout in PublicRoutes
+
+
+
+
+
+
+
+

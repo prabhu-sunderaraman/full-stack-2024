@@ -1,5 +1,4 @@
 import { RouterProvider } from 'react-router-dom';
-import logo from '../../assets/images/logo.svg';
 import '../../assets/styles/App.css';
 import PublicRoutes from '../../routes/PublicRoutes';
 
