@@ -42,3 +42,5 @@
 ### Part III
 
 * Define MainLayout.js
+* Define PublicRoutes
+* Render them in App.js
