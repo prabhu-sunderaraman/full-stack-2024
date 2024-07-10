@@ -1,6 +1,8 @@
 import {createBrowserRouter} from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import LabsLayout from '../layouts/LabsLayout';
+import Home from '../components/home/Home';
+import Contact from '../components/contact/Contact';
 
 const PublicRoutes = createBrowserRouter([
     {
@@ -9,7 +11,7 @@ const PublicRoutes = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <div>Home view</div>
+                element: <Home/>
             },
             {
                 path: '/labs',
@@ -27,7 +29,7 @@ const PublicRoutes = createBrowserRouter([
             },
             {
                 path: '/contact',
-                element: <div>Contact us view</div>
+                element: <Contact/>
             }
         ]
     }
