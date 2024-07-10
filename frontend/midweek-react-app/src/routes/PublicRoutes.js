@@ -1,5 +1,6 @@
 import {createBrowserRouter} from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
+import LabsLayout from '../layouts/LabsLayout';
 
 const PublicRoutes = createBrowserRouter([
     {
@@ -11,12 +12,18 @@ const PublicRoutes = createBrowserRouter([
                 element: <div>Home view</div>
             },
             {
-                path: '/lab01',
-                element: <div>Lab 01 view</div>
-            },
-            {
-                path: '/lab02',
-                element: <div>Lab02 view</div>
+                path: '/labs',
+                element: <LabsLayout/>,
+                children: [
+                    {
+                        index: true,
+                        element: <div>Lab01 view</div>
+                    },
+                    {
+                        path: '/labs/lab02',
+                        element: <div>Lab02 view</div>
+                    }
+                ]
             },
             {
                 path: '/contact',
