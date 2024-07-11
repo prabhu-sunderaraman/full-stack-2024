@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import loadMessage from "../../apis/HomeApi";
+//import loadMessage from "../../apis/HomeApi";
+//import loadMessage from "../../apis/AxiosApi";
+import axiosApi from "../../apis/AxiosApi";
 
 const Home = () => {
     const [message, setMessage] = useState('');
     useEffect(() => {
-        let response = loadMessage();
-        response
-            .then(output => setMessage(output));
+        axiosApi
+            .get('/message')
+            .then(output => setMessage(output.data));
     }, []);
     return (<div>
         {message}
