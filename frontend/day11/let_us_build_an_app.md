@@ -113,3 +113,53 @@ app.listen(8000, () => {
 ##### ToDo
 
 * Modify Home component to connect to http://localhost:8000/message and display the output
+
+
+### Part VII
+
+* So far we have been developing this application using a development server.
+* Time to build your application and deploy it in some other server
+* Stop your development server and run the following command
+
+```
+sudo npm run build
+```
+
+* Notice a **build** folder generated
+* Observe the contents
+
+* You can deploy the contents of build in server of your choice
+* For example you can install this tool
+
+```
+sudo npm i -g serve
+```
+
+* And run this command
+
+```
+serve -s build
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

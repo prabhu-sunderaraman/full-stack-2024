@@ -1,5 +1,6 @@
 import axios from 'axios';
 const env = process.env;
+console.log("env", env);
 const backendUrl = env.REACT_APP_BACKEND_URL;
 
 const axiosApi = axios.create({
