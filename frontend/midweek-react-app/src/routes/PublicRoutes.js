@@ -2,8 +2,13 @@ import {createBrowserRouter} from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import LabsLayout from '../layouts/LabsLayout';
 import Home from '../components/home/Home';
-import Contact from '../components/contact/Contact';
-import Lab01 from '../components/lab01/Lab01';
+//import Contact from '../components/contact/Contact';
+import React from 'react';
+//import Lab01 from '../components/lab01/Lab01';
+
+const Contact = React.lazy(() => import('../components/contact/Contact'));
+const Lab01 = React.lazy(() => import('../components/lab01/Lab01'));
+
 
 const PublicRoutes = createBrowserRouter([
     {
@@ -20,7 +25,9 @@ const PublicRoutes = createBrowserRouter([
                 children: [
                     {
                         index: true,
-                        element: <Lab01/>
+                        element: <React.Suspense fallback={<div>Not able to load Lab01. Service Unavailable</div>}>
+                            <Lab01/>
+                        </React.Suspense>
                     },
                     {
                         path: '/labs/lab02',
@@ -30,7 +37,9 @@ const PublicRoutes = createBrowserRouter([
             },
             {
                 path: '/contact',
-                element: <Contact/>
+                element: <React.Suspense fallback={<div>Not able to load Contact us. Service Unavailable</div>}>
+                    <Contact/>
+                </React.Suspense>
             }
         ]
     }
