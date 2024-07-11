@@ -59,6 +59,57 @@
 * Show this Country View with Reducer component when you click lab01
 
 
+### Part VI
+
+* Let's build some backend
+
+* Create a folder [backend-app]. *Note: Not inside your react application folder* 
+* Create a file package.json with the following contents
+
+``` json
+{
+  "name": "backend-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
+
+```
+
+* Create a file server.js with the following contents
+
+``` javascript
+const app = require('express')();
+const cors = require('cors');
+
+app.use(cors({
+    origin: '*'
+}));
 
 
+app.get('/message', (req, res) => {
+    res.send("Hi there");
+});
 
+app.listen(8000, () => {
+    console.log("server started in 8000");
+});
+```
+
+* Open your command prompt or Terminal and navigate to [backend-app] folder
+* Run the command npm i in Windows or sudo npm i in Mac
+* Run node server.js command to start the backend server
+
+##### ToDo
+
+* Modify Home component to connect to http://localhost:8000/message and display the output
