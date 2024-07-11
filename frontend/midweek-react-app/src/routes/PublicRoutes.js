@@ -3,6 +3,7 @@ import MainLayout from '../layouts/MainLayout';
 import LabsLayout from '../layouts/LabsLayout';
 import Home from '../components/home/Home';
 import Contact from '../components/contact/Contact';
+import Lab01 from '../components/lab01/Lab01';
 
 const PublicRoutes = createBrowserRouter([
     {
@@ -19,7 +20,7 @@ const PublicRoutes = createBrowserRouter([
                 children: [
                     {
                         index: true,
-                        element: <div>Lab01 view</div>
+                        element: <Lab01/>
                     },
                     {
                         path: '/labs/lab02',
