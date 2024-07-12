@@ -4,6 +4,7 @@ import { Select } from 'antd';
 
 const Lab03 = () => {
     return (<div style={{margin: "10px", padding: "10px", width: "400px"}}>
+        <button style={{fontColor: 'black', backgroundColor: 'white', width: '100px'}}>Normal button</button>
         <h4>Lab03 using MUI components</h4>
         <TextField id="standard-basic" label="Name" variant="standard" /> <br/>
         <TextField id="standard-basic" label="Email" type="email" variant="standard" /> <br/>
