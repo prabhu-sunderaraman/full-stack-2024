@@ -141,6 +141,22 @@ sudo npm i -g serve
 serve -s build
 ```
 
+### Part VIII
+
+* Create a Lab03 component; Add a router to Lab03 appropriately
+* Build a simple form with the following UI components (with static data)
+* name, email, years of experience, country, Gender(Male, Female, Other) radio button and a submit button
+* You are going to use Material UI
+
+```
+  sudo npm i --save @mui/material @emotion/react @emotion/styled
+```
+
+* https://mui.com/material-ui/all-components/
+
+
+
+
 
 
 

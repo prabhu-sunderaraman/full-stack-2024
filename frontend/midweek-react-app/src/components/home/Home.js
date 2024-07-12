@@ -8,7 +8,9 @@ const Home = () => {
     useEffect(() => {
         axiosApi
             .get('/message')
-            .then(output => setMessage(output.data));
+            .then(output => setMessage(output.data))
+            .catch(error => setMessage(`Error loading home: ${error.message}`));
+            
     }, []);
     return (<div>
         {message}
