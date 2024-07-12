@@ -5,6 +5,7 @@ import Home from '../components/home/Home';
 //import Contact from '../components/contact/Contact';
 import React from 'react';
 import Lab02 from '../components/lab02/Lab02';
+import Lab03 from '../components/lab03/Lab03';
 //import Lab01 from '../components/lab01/Lab01';
 
 const Contact = React.lazy(() => import('../components/contact/Contact'));
@@ -33,6 +34,10 @@ const PublicRoutes = createBrowserRouter([
                     {
                         path: '/labs/lab02',
                         element: <Lab02/>
+                    },
+                    {
+                        path: '/labs/lab03',
+                        element: <Lab03/>
                     }
                 ]
             },

@@ -7,6 +7,7 @@ const LabsLayout = () => {
             <ul className='layoutList'>
                 <li><NavLink to="/labs">Lab01</NavLink></li>
                 <li><NavLink to="/labs/lab02">Lab02</NavLink></li>
+                <li><NavLink to="/labs/lab03">Lab03</NavLink></li>
             </ul>
         </header>    
         <hr/>
