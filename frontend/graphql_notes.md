@@ -19,6 +19,15 @@
 
 ``` gql
 
+mutation($title1: String, $title2: String) {
+  m1: removeMovie(title: $title1)
+  m2: removeMovie(title: $title2)
+}
+
+mutation($title: String) {
+  removeMovie(title: $title)
+}
+
 query($title: String) {
   movie(title: $title) {
     title

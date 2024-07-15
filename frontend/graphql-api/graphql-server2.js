@@ -28,6 +28,9 @@ let schema = `
         movie(title: String): Movie,
         movies(year: Int): [Movie]
     }
+    type Mutation {
+        removeMovie(title: String): ID
+    }    
 `;
 
 let moviesDb = [
@@ -150,6 +153,18 @@ let moviesDb = [
 ];
 
 let resolvers = {
+    Mutation: {
+        removeMovie(src, args) {
+            let title = args.title;
+            let movieToBeRemoved = moviesDb.find(item => item.title === title);
+            if(movieToBeRemoved) {
+                moviesDb = moviesDb.filter(item => item.title !== title);
+                return movieToBeRemoved.id;
+            } else {
+                return null;
+            }
+        }
+    },
     Query: {
        movies(src, args) {
             let year = args.year;
