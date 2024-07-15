@@ -15,3 +15,51 @@
 ```
 * Create a file **hello-server.js** file
 
+### Queries
+
+``` gql
+
+query($title: String) {
+  movie(title: $title) {
+    title
+    actors {
+      name
+      age
+    }
+  }
+}
+
+# query {
+#  titleWithActors: allMovies {
+#    title
+#    actors {
+#      name
+#    }
+#  }
+
+#  titleWithRatings: allMovies {
+#    title
+#    ratings {
+#      name
+#      score
+#    }
+#  }
+
+#  titleWithLanguages: allMovies {
+#    title
+#    language
+#  }
+
+# }
+
+# # query  {
+# #   allMovies {
+# #     title
+# #     ratings {
+# #       name
+# #       score
+# #     }
+# #   }
+# # }
+
+```
