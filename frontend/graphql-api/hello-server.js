@@ -1,5 +1,6 @@
 const { ApolloServer } = require("@apollo/server");
 const { startStandaloneServer } = require('@apollo/server/standalone');
+const { default: axios } = require("axios");
 
 let schema = `
     type Query {
@@ -11,22 +12,28 @@ let schema = `
 
 let resolvers = {
     Query: {
-        temperature() {
-            return Math.random() * 100;
+        temperature: async () => {
+            let result = await axios.get('http://localhost:8000/temperature')
+            return parseFloat(result.data);
+            //return Math.random() * 100;
         },
-        stockPrice(src, args) {
-            return Math.random() * 10000;
+        stockPrice: async (src, args) => {
+            let result = await axios.get('http://localhost:8000/cmp')
+            return parseFloat(result.data);
+            //return Math.random() * 10000;
         },
-        capital(src, args) {
-            if(args.country === "India") {
-                return "New Delhi";
-            } else if(args.country === "USA") {
-                return "Washington DC";
-            } else if(args.country === "France") {
-                return "Paris";
-            } else {
-                return "NA in DB";
-            }
+        capital: async (src, args)  => {
+            let result = await axios.get(`http://localhost:8000/capital/${args.country}`);
+            return result.data;
+            // if(args.country === "India") {
+            //     return "New Delhi";
+            // } else if(args.country === "USA") {
+            //     return "Washington DC";
+            // } else if(args.country === "France") {
+            //     return "Paris";
+            // } else {
+            //     return "NA in DB";
+            // }
         }
     }
 };
