@@ -25,7 +25,8 @@ let schema = `
     
     type Query {
         allMovies: [Movie],
-        movie(title: String): Movie
+        movie(title: String): Movie,
+        movies(year: Int): [Movie]
     }
 `;
 
@@ -150,6 +151,10 @@ let moviesDb = [
 
 let resolvers = {
     Query: {
+       movies(src, args) {
+            let year = args.year;
+            return moviesDb.filter(item => item.year === year);
+       }, 
        allMovies() {
             //Ideally you will connect to backend API and fetch all the movies; but let's hardcode it
             return moviesDb;
