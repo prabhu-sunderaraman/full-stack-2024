@@ -13,10 +13,28 @@ const allMoviesQuery = gql`
     }
 `;
 
+const fetchMovieDetailsQuery = gql`
+    query fetchMovieDetailsQuery($titleVar: String) {
+        movie(title: $titleVar) {
+            title  
+            actors {
+               name
+                age
+            }
+            ratings {
+                name
+                score
+            }
+        }
+}`;
+
 const MoviesDisplay1 = () => {
-    const [loadAllMovies, { loading, error, data }] = useLazyQuery(allMoviesQuery);
+    const [loadAllMovies, loadAllMoviesResult] = useLazyQuery(allMoviesQuery);
     const [movies, setMovies] = useState([]);
     const [errorMessage, setErrorMessage] = useState('');
+    
+    const [movieDetails, setMovieDetails] = useState({});
+    const [loadMovieDetails, loadMovieDetailsResult] = useLazyQuery(fetchMovieDetailsQuery);
 
     // this option is used to actively fetch data from GraphQL Api
     // const {data} = useQuery(allMoviesQuery);
@@ -25,26 +43,49 @@ const MoviesDisplay1 = () => {
     // }, []);
 
     useEffect(() => {
+        const {data, error} = loadAllMoviesResult;
         if(error) {
-            console.log("Error", error);
             setErrorMessage(error.message);
         }
         if(data) {
             setMovies(data.allMovies);
         }
-    });
+    }, [loadAllMoviesResult]);
+
+    useEffect(() => {
+        const {data, error} = loadMovieDetailsResult;
+        if(error) {
+            setErrorMessage(error.message);
+        }
+        if(data) {
+            setMovieDetails(data.movie)
+        }
+    }, [loadMovieDetailsResult]);
+
 
     const fetchMoviesButtonClicked = () => {
         loadAllMovies();
     };
+
+    const fetchMovieDetails = (title) => {
+        loadMovieDetails({
+            variables: {
+                "titleVar": title
+            }
+        });
+    }
+
     return (<div>
         <h5>Movies</h5>
         {
-            movies.map(m => (<div key={m.id}>
+            movies.map(m => (<div onClick={() => fetchMovieDetails(m.title)} key={m.id}>
                 {m.title}, {m.year}, {m.genre}, {m.language}
             </div>))
         }
         <br/>
+        <p>{
+            movieDetails.title ? JSON.stringify(movieDetails) : ''
+        }</p>
         <button onClick={fetchMoviesButtonClicked}>Fetch movies</button>
         <h4>{errorMessage}</h4>
     </div>);
