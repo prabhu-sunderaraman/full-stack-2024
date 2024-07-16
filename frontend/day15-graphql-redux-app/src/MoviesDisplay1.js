@@ -29,7 +29,7 @@ const fetchMovieDetailsQuery = gql`
 }`;
 
 const MoviesDisplay1 = () => {
-    const [loadAllMovies, loadAllMoviesResult] = useLazyQuery(allMoviesQuery);
+    const [loadAllMovies, loadAllMoviesResult] = useLazyQuery(allMoviesQuery, {fetchPolicy: "cache-first", pollInterval: 45000});
     const [movies, setMovies] = useState([]);
     const [errorMessage, setErrorMessage] = useState('');
     
