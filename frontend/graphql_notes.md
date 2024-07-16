@@ -1,3 +1,43 @@
+### GraphQL
+
+* GraphQL is a middleware API that takes in queries and filters the response data
+
+##### Need
+
+* If you have multiple applications(or frontend) invoking backend API, you may need different forms of data; 
+* If you want to fetch variety of data from backend API, you can combine the requests into one single request
+* You have a complex data structure like social media applications
+
+##### Setup
+
+* Setup GraphQL in any technology; NodeJS(Apollo server), Java, .NET, Python
+* Define Schema and Resolvers(tech specific)
+
+``` gql
+type Person {
+  id ID!,
+  name String,
+  age Int,
+  cars: [Car]
+}
+
+type Car {
+  model: String,
+  year: Int
+}
+
+type Query {
+  persons: [Person]
+}
+
+type Mutation {
+  addPerson(name: String, age: Int): Person,
+  removePerson(id: ID): ID
+}
+
+```
+
+
 ### Set up GraphQL using Apollo Server
 
 * Create a folder [graphql-api]
@@ -72,3 +112,14 @@ query($title: String) {
 # # }
 
 ```
+
+### Setup Apollo Client
+
+* Create a react application **sudo npx create-react-app day15-graphql-redux-app**
+* Install @apollo/client and graphql libraries to this project
+
+```
+sudo npm i --save graphql @apollo/client
+```
+
+* Start the server
