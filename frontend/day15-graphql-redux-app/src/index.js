@@ -5,13 +5,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ApolloProvider } from '@apollo/client';
 import graphqlApi from './GraphqlApi';
+import {Provider} from 'react-redux';
+import { store } from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ApolloProvider client={graphqlApi}>
+  <Provider store={store}>
     <App />
-  </ApolloProvider>    
+  </Provider>    
 );
+// root.render(
+//   <ApolloProvider client={graphqlApi}>
+//     <App />
+//   </ApolloProvider>    
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
