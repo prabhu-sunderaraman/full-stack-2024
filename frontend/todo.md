@@ -1,5 +1,5 @@
 * ~~difference between arrow and regular functions -> *context switch*~~
-* ~~Promise API~~; Event Loop
+* ~~Promise API~~; ~~Event Loop~~
 * export default vs plain export
 * create a new environment like demo
 
@@ -27,7 +27,7 @@
 * ~~GraphQL (Apollo)~~
 * ~~Security, i18n~~
 * ~~Redux~~
-* Redux Saga, (*generator/yield* in JS)
+* Redux Saga, (~~*generator/yield* in JS~~)
 * Memoization (useMemo, useCallback) -> React
 * Websockets
 * Webpack and Testing
