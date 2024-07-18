@@ -24,13 +24,13 @@
 
 ### This week
 
+* ~~GraphQL (Apollo)~~
+* ~~Security, i18n~~
+* ~~Redux~~
+* Redux Saga, (*generator/yield* in JS)
 * Memoization (useMemo, useCallback) -> React
-
-* GraphQL (Apollo)
-* Security, i18n
-* Redux
-* Webpack and Testing
 * Websockets
+* Webpack and Testing
 * Microfrontend
 * NextJS
 * React native
