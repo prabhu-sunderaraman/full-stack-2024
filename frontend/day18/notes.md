@@ -20,7 +20,7 @@
 
 * Every test is run independently of the other
 * You WILL NEVER CALL one test from another test
-* Always test your code IN ISOLATION
+* Always test your code IN ISOLATION: How do you test YOUR CODE ALONE without getting impacted by other code
 
 ###### Unit testing libraries
 
