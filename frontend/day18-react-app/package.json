@@ -12,12 +12,12 @@
     "web-vitals": "^2.1.4"
   },
   "jest": {
-        "collectCoverageFrom": [
-          "!src/index.js",
-          "!src/*.svg",
-          "!src/report*.js"
-        ]
-      },
+    "collectCoverageFrom": [
+      "!src/index.js",
+      "!src/*.svg",
+      "!src/report*.js"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -41,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^13.13.1"
   }
 }
