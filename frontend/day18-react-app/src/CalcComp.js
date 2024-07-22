@@ -17,6 +17,10 @@ const CalcComp = ({title}) => {
         setMessage(`Product of ${number1} and ${number2} is ${number1 * number2}`);
     };
 
+    const divideButtonClicked = () => {
+        setMessage(`Quotient while dividing ${number1} and ${number2} is ${number1/number2}`);
+    };
+
     return (<div>
         <h1>{title ? title : 'Calculator'}</h1>
         <input type="number" data-testid="number1Text" placeholder="number 1" onChange={e => setNumber1(parseInt(e.target.value))}></input> <br/>
@@ -24,6 +28,7 @@ const CalcComp = ({title}) => {
         <button onClick={addButtonClicked} data-testid="addButton">Add</button>
         <button onClick={subtractButtonClicked} data-testid="subtractButton">Subtract</button>
         <button onClick={multiplyButtonClicked} data-testid="multiplyButton">Multiply</button>
+        <button onClick={divideButtonClicked} data-testid="divideButton">Divide</button>
         <h4>{message}</h4>
     </div>);
 };

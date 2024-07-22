@@ -33,10 +33,16 @@ describe('UI components exist', () => {
       const addButton = screen.getByTestId("addButton");
       expect(addButton).toBeInTheDocument();
    });
+
+   test('page contains divide button', () => {
+      const divideButton = screen.getByTestId("divideButton");
+      expect(divideButton).toBeInTheDocument();
+   });
+   
       
 });
 
-describe('add, subtract, multiply user actions', () => {
+describe('add, subtract, multiply, divide user actions', () => {
    test('enter values and click add button', async () => {
       const textbox1 = screen.getByTestId('number1Text');
       const textbox2 = screen.getByTestId('number2Text');
@@ -70,6 +76,17 @@ describe('add, subtract, multiply user actions', () => {
       expect(message).toBeInTheDocument();
    });
       
+   test('divide action', async () => {
+      const textbox1 = screen.getByTestId("number1Text");
+      const textbox2 = screen.getByTestId("number2Text");
+      await fireEvent.change(textbox1, {target: {value: 10}});
+      await fireEvent.change(textbox2, {target: {value: 5}});
+      const divideButton = screen.getByTestId("divideButton");
+      await userEvent.click(divideButton);
+      const message = screen.getByText(/Quotient while dividing 10 and 5 is 2/);
+      expect(message).toBeInTheDocument();
+   });
+   
 });
 
 
