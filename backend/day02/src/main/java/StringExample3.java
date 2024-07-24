@@ -8,7 +8,7 @@ public class StringExample3 {
         System.out.println(name.split(" ")[0]);
         System.out.println(name.split(" ")[1]);
         System.out.println(name.substring(0, 3));
-
+//        name.contains()
         String paragraph = """
                 This is a 
                 multi line 
