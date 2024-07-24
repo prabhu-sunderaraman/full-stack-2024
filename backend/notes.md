@@ -45,7 +45,14 @@
 * Visual Studio Code
 
 
+#### Day 01
 
+* javac, java
+* Data types; Primitive and Reference
+* Primitive types are stored on the stack; Reference types are stored on the heap
+* **Reference types:**Arrays, Strings, Objects 
+* **Primitive types**: int, float, double, short, char, boolean, byte
+* Strings; Immutable; The values(or literals) are stored in a string constant pool (SCP)
 
 
 
