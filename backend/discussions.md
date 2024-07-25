@@ -62,5 +62,6 @@ console.log(person.fullName); // Output: Jane Smith
 
 ### Jul 26
 
-* Arrays are faster to access compared to ArrayLists. WHY?
-* Arrays or ArrayLists? which one is suited for concurrent applications?
+* Arrays are faster to access compared to ArrayLists. WHY? - Malavika
+* Arrays or ArrayLists? which one is suited for concurrent applications? - Anek
+* Output of printstatement is weird - Swetha
