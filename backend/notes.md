@@ -55,7 +55,12 @@
 * Strings; Immutable; The values(or literals) are stored in a string constant pool (SCP)
 
 
+### Day 02
 
+* String; StringBuilder;
+* Strings can be created in two ways with/without new keyword
+* String comparison; Do not use == and use .equals instead
+* classes and objects
 
 
 
