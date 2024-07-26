@@ -90,7 +90,9 @@ List is a collection that allows duplicates
 
 * Set or List, which collection preserves the order (inserting and fetching) with a code example - Swetha
 * Set or List, which is faster to access with a code example - Aishuwarya
-
+* ArrayList vs Vector vs LinkedList; (Code example) -> Aishuwarya
+* TreeSet vs HashSet vs LinkedHashSet (Code example) -> Princy
+* TreeMap vs. LinkedHashMap vs. Hashtable vs. HashMap() (Code example) -> Mathew Francis;
 
 
 
