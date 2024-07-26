@@ -63,5 +63,42 @@ console.log(person.fullName); // Output: Jane Smith
 ### Jul 26
 
 * Arrays are faster to access compared to ArrayLists. WHY? - Malavika
+
+```
+Arrays are stored in contiguous memory locations, so easy to spot an element and access. It paves way for direct access. 
+ArrayLists can also be accessed using index but are more dynamic in nature, so the access mechanism is a bit slower
+```
+
 * Arrays or ArrayLists? which one is suited for concurrent applications? - Anek
+
+```
+Concurrency is the ability to perform multiple tasks simultaneously
+Arrays and ArrayLists are not suited for concurrent applications because they are not "thread-safe"
+You have to design the collection in such a way that 
+multiple people can access it without having to wait and without the corruption of data 
+```
+
+
 * Output of printstatement is weird - Swetha
+
+```
+Set is a collection that DOES NOT allow duplicates
+List is a collection that allows duplicates
+```
+
+### Jul 29
+
+* Set or List, which collection preserves the order (inserting and fetching) with a code example - Swetha
+* Set or List, which is faster to access with a code example - Aishuwarya
+
+
+
+
+
+
+
+
+
+
+
+
