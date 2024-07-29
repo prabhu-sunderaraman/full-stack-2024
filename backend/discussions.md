@@ -95,6 +95,34 @@ List is a collection that allows duplicates
 * TreeMap vs. LinkedHashMap vs. Hashtable vs. HashMap() (Code example) -> Mathew Francis;
 
 
+* static members
+* interfaces- constants, default methods, static methods, abstract methods
+* class can implement more than one interface whereas a class can inherit only one other class
+* interfaces cannot be instantiated but can act as reference to classes that implement the interface
+
+``` java
+interface Animal {}
+Animal animal = new Animal(); //ERROR
+
+class Dog implements Animal {}
+Animal animal = new Dog();
+
+```  
+
+* java.util package contains all the collections that you use
+* List, Set and Map
+* List is an ordered collection => ArrayList, Vector, Stack, Queue, LinkedList
+* Set is an unordered collection that does not allow duplication => HashSet, TreeSet, SortedSet
+* Map is a dictionary => HashMap, Hashtable, SortedMap, LinkedHashMap, TreeMap
+
+
+
+#### ToDo
+
+* Bundle the whole project as a jar file and run the class in Lab05
+
+
+
 
 
 
