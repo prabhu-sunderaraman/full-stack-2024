@@ -24,7 +24,7 @@ public class BuiltInFunctionalInterfaces1 {
         System.out.println(containsSpace.test("HELLO"));
 
         // Let's check if a number is greater than 10 and divisible by 5 and also an even number
-        // if(number > 10 && number % 5 == 0 && num % 2 == 0) {} in declarative style
+        // if(number > 10 && number % 5 == 0 && num % 2 == 0) {} in imperative style
         Predicate<Integer> gt10 = num -> num > 10;
         Predicate<Integer> divBy5 = num -> num % 5 == 0;
         Predicate<Integer> even = num -> num % 2 == 0;
