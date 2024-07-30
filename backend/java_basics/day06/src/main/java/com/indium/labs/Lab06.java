@@ -12,7 +12,7 @@ public class Lab06 {
                 .and(isNotEmpty)
                 .and(minLength.apply(8))
                 .and(maxLength.apply(12))
-                .and(hasUppercaseLetter)
+                .or(hasUppercaseLetter)
                 //.and(usernameMinLength)
                 //.and(usernameMaxLength)
                 .test(username);
