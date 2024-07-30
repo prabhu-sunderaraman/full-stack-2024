@@ -122,6 +122,13 @@ Animal animal = new Dog();
 * Bundle the whole project as a jar file and run the class in Lab05
 
 
+### Lambda expressions
+
+* You can implement an interface in 3 ways
+* Create a concrete class that implements the interface
+* Create an anonymous inner class
+* Create a lambda expression
+* Lambda expression is a shortcut for anonymous inner class. ie., a new class is generated during runtime
 
 
 
