@@ -81,10 +81,14 @@ multiple people can access it without having to wait and without the corruption 
 
 * Output of printstatement is weird - Swetha
 
+``` markdown
+
+* Set is a collection that DOES NOT allow duplicates
+* List is a collection that allows duplicates
+
 ```
-Set is a collection that DOES NOT allow duplicates
-List is a collection that allows duplicates
-```
+
+<br/>
 
 ### Jul 29
 
@@ -129,6 +133,22 @@ Animal animal = new Dog();
 * Create an anonymous inner class
 * Create a lambda expression
 * Lambda expression is a shortcut for anonymous inner class. ie., a new class is generated during runtime
+
+
+### Built-in functional interfaces
+
+* java.util.function is the package that contains all built-in functional interfaces
+* Predicate, Function, Supplier, Consumer
+* **Predicate** always return a boolean -> filter(...) methods take in a predicate as argument
+* **Function** can take any type and return any type -> map(...) methods take in a Function as argument
+* **Supplier** supply you with some data of any type -> get() methods 
+* **Consumer** consumes the data you provide -> forEach method takes a consumer as argument
+
+
+
+
+
+
 
 
 
