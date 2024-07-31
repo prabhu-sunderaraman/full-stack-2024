@@ -6,8 +6,8 @@ import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Lab07 {
-    private static final Function<Item, String> itemNameFunction = item -> item.getName();
+public class Lab07UsingMethodReference {
+    private static final Function<Item, String> itemNameFunction = Item::getName;
 
     static List<Item> items = Arrays.asList(
             new Item("Nike", 20.45),
@@ -27,12 +27,7 @@ public class Lab07 {
     private static void generateJson() {
         String json = items
                 .stream()
-                .map(item -> """
-                        {
-                            "name": %s,
-                            "price": %s
-                        }
-                        """.formatted(item.getName(), item.getPrice()))
+                .map(Item::toJson)
                 .collect(Collectors.joining(", ", "[", "]"));
         System.out.println(json);
     }
@@ -48,7 +43,7 @@ public class Lab07 {
     private static void printCostliestShoe() {
         Item costliestItem = items
                 .stream()
-                .reduce((costlyItem, nextItem) -> costlyItem.getPrice() > nextItem.getPrice() ? costlyItem : nextItem)
+                .reduce(Item::compareItems)
                 .get();
         System.out.println(costliestItem.getName() + ": " + costliestItem.getPrice());
     }
@@ -69,6 +64,6 @@ public class Lab07 {
         items
                 .stream()
                 .map(itemNameFunction)
-                .forEach(item -> System.out.println(item));
+                .forEach(System.out::println);
     }
 }

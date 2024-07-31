@@ -16,4 +16,18 @@ public class Item {
     public double getPrice() {
         return this.price;
     }
+
+    public static Item compareItems(Item item1, Item item2) {
+        return item1.getPrice() > item2.getPrice() ? item1 : item2;
+    }
+
+    public String toJson() {
+        String json = """
+                {
+                    "name": %s,
+                    "price": %s
+                }
+                """.formatted(name, price);
+        return json;
+    }
 }
