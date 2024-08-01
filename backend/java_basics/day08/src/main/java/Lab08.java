@@ -43,8 +43,8 @@ public class Lab08 {
         countryPopulationMap
                 .entrySet()
                 .stream()
-                .filter(country -> country.getValue() > population)
-                .sorted(Comparator.comparing(country -> country.getValue()))
+                .filter(entry -> entry.getValue() > population)
+                .sorted(Comparator.comparing(entry -> entry.getValue()))
                 .forEach(System.out::println);
     }
 
