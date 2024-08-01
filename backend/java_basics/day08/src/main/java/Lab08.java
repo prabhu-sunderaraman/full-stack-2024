@@ -3,6 +3,7 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -18,7 +19,7 @@ public class Lab08 {
 
 //        storeNames("cities.txt", line -> line.split(",")[0]);
 //        storeNames("countries.txt", line -> line.split(",")[1]);
-        long population = 100000000L;
+        long population = 10000000L;
         printNamesOfCitiesWithPopulationGt(population);
         System.out.println();
         printNamesOfCountriesWithPopulationGt(population);
@@ -43,7 +44,8 @@ public class Lab08 {
                 .entrySet()
                 .stream()
                 .filter(country -> country.getValue() > population)
-                .forEachOrdered(System.out::println);
+                .sorted(Comparator.comparing(country -> country.getValue()))
+                .forEach(System.out::println);
     }
 
     private static void printNamesOfCitiesWithPopulationGt(long population) {
