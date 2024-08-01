@@ -145,6 +145,33 @@ Animal animal = new Dog();
 * **Consumer** consumes the data you provide -> forEach method takes a consumer as argument
 
 
+### Stream API
+
+* java.util.stream package contains stream related classes
+* Every collection has a .stream() method that you can use to create a stream
+* Stream is a snapshot of your collection
+* It gives a functional style of coding using methods like filter, map, reduce, collect, find
+* Streams cannot be reused so that's why you create a stream everytime you want to process a collection
+* Streams process sequentially by default
+* Streams are lazily evaluated; Till it encounters a terminal operation like forEach, collect, get, reduce stream code is not evaluated
+* Method Reference :: operator
+* Method reference is a replacement for a lambda expression; If you have a lambda expression with many lines of code, 
+* you can extract it to a separate method and refer to that method using :: operator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
