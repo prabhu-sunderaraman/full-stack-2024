@@ -207,14 +207,36 @@ HashMap allows null key and null values;
 * TreeMap or LinkedHashMap? when will you prefer?
 
 
+#### Modularity in Java
 
+* .jmod -> java modules
+* .jar -> java archives
+* .class
 
+* jdk is organized into modules, packages and classes
 
+```
+[modules]
+	- [packages]
+		- .class files
+```
 
+* **java.base** is the standard module which contains all the standard packages
+* **java.lang** package is the standard package that is available to all the applications
 
+* The executables that you can build in a java application is .jmod or .jar or .war[not used these days] file
 
+* We are going to be creating java applications; building them; and generate .jar files; 
+* Most of the Java applications, the deployable entity is a **.jar file**
+* jar file is like a zip file
 
+```
+java -jar <yourjarfilename>
+```
 
+```
+jar xf <yourjarfilename>
+```
 
 
 
