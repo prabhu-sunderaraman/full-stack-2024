@@ -158,13 +158,53 @@ Animal animal = new Dog();
 * Method reference is a replacement for a lambda expression; If you have a lambda expression with many lines of code, 
 * you can extract it to a separate method and refer to that method using :: operator
 
+### Aug 2
 
+* Set or List, which collection preserves the order (inserting and fetching) with a code example - Swetha
 
+```
+List preserves order
+Set is an unordered collection
+```
 
+* Set or List, which is faster to access with a code example - Aishuwarya
 
+```
+Fast or Slow depends on how you access;
+If you use .forEach, not much difference for 100K records; But Set still has an edge
+If you use .contains() Set outperforms List
 
+```
 
+* ArrayList vs Vector vs LinkedList; (Code example) -> Aishuwarya
 
+```
+LinkedList is more linear traversal; has methods to addFirst and addLast
+Access using element is not possible, only using index
+LinkedList consumes more memory because it has to maintain pointers to other elements
+```
+
+* TreeSet vs HashSet vs LinkedHashSet (Code example) -> Princy
+
+```
+TreeSet sorts items; Does not allow null values
+HashSet does not maintain order; Allows null values
+LinkedHashSet maintains insertion order; Allows null values
+```
+
+* TreeMap vs. LinkedHashMap vs. Hashtable vs. HashMap() (Code example) -> Mathew Francis;
+
+```
+TreeMap sorts keys; Use Comparator to customize sorting
+LinkedHashMap is a doubly linked list; maintains insertion order
+HashMap allows null key and null values; 
+```
+
+#### Aug 2
+
+* When will you prefer LinkedList to ArrayList? - Aishuwarya
+* SortedSet vs TreeSet? - Princy
+* TreeMap or LinkedHashMap? when will you prefer?
 
 
 
