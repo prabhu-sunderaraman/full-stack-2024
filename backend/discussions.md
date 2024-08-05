@@ -238,6 +238,217 @@ java -jar <yourjarfilename>
 jar xf <yourjarfilename>
 ```
 
+#### Exception handling
+
+* try, catch, finally, throw, throws
+* Checked, Unchecked
+* Checked exceptions extend java.lang.Exception
+* Unchecked exceptions extends java.lang.RuntimeException
+
+#### Databases
+
+* RDBMS - SQL databases; MySQL, Postgres, Oracle, DB2
+* NoSQL databases - MongoDB, Couchbase, Graph, Cosmos
+
+* When do your prefer RDBMS?
+* Data integrity is extremely important and cannot afford to have duplication
+* CRUD(Create-Retrieve-Update-Delete) operations
+* Consistency and Atomicity
+* Transactions
+
+#### RDBMS
+
+* Databases or Schemas
+* Tables (Tables contains column definitions)
+* Data duplication is very important
+* Normalize data and maintain them
+* You spread your data across tables and relate them 
+
+* Business card or visiting card or LinkedIn
+
+* name, title, city/country, educational experience, work experience, 
+
+* NoSQL
+
+``` json
+{
+	"name": "Prabhu",
+	"title": "Full stack engineer",
+	"city": "Chennai",
+	"country": "India",
+	"education": [
+		{
+			"year": 1996,
+			"school": ""
+		},
+		{
+			"year": 1994,
+			"school": ""
+		}
+	],
+	"workExperience": [
+		{
+			"year": 2000,
+			"company": "",
+			"role": "",
+			"description": ""
+		},
+		{
+			"year": 2000,
+			"company": "",
+			"role": "",
+			"description": ""
+		},
+		{
+			"year": 2000,
+			"company": "",
+			"role": "",
+			"description": ""
+		}
+			
+	]
+}
+// Gen Z
+{
+	"name": "Sam",
+	"pronoun": "he/him",
+	"title": "Backend engineer",
+	"city": "Remote",
+	"country": "India",
+	"education": [
+		{
+			"year": 1996,
+			"school": ""
+		},
+		{
+			"year": 1994,
+			"school": ""
+		}
+	],
+	"hobbies": [
+		{
+			"name": "YT shorts",
+			"description": "",
+			"channel": ""
+		}
+	],
+	"workExperience": [
+		{
+			"year": 2000,
+			"company": "",
+			"role": "",
+			"description": ""
+		}
+	],
+	"skills": [
+		{
+			"languages": []
+		},
+		{
+			"writing": []
+		}
+	],
+	"recommendations": []
+}
+
+
+{
+	"firstName": "Sam",
+	"designation": "Backend engineer",
+	"city": "Remote",
+	"educationalQualifications": [
+		{
+			"year": 1996,
+			"school": ""
+		},
+		{
+			"year": 1994,
+			"school": ""
+		}
+	],
+	"passtimeActivities": [
+		{
+			"name": "YT shorts",
+			"description": "",
+			"channel": ""
+		}
+	],
+	"jobExperience": [
+		{
+			"year": 2000,
+			"company": "",
+			"role": "",
+			"description": ""
+		}
+	],
+	"skillSets": [
+		{
+			"languages": []
+		},
+		{
+			"writing": []
+		}
+	],
+	"recommendations": []
+}
+
+```
+
+// Normalized data
+
+```markdown
+
+[persons]
+id	first_name	last_name	age
+
+P1  Prabhu		S			46
+P2	Sam			T			23
+
+[address]
+id	city	country	person_id
+
+A1	Chennai	India	P1
+
+
+[education]
+id	year	school
+
+E1  1996	...
+E2	1994	...
+E3	2016	...
+E4	2020	...
+
+[person_education]
+person_id	education_id
+
+P1			E1
+P1			E2
+P2			E3
+P2			E4
+	
+[hobbies]	
+
+id	name	description
+H1	YT		Watch Shorts all the time
+H2	Hike	Mountain Hike
+H3  Biriyani	Eat every weekend
+
+[person_hobby]
+person_id	hobby_id
+P2			H1
+P2			H2
+P2			H3
+
+```
+
+* SQL -> Structured Query Language to work with your data
+* Avoid duplication
+* Consistency
+* Support for transactions, concurrency
+* Cost
+
+
+
 
 
 
