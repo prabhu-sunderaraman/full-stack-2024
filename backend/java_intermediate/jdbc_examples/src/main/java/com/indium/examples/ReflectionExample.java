@@ -1,5 +1,8 @@
 package com.indium.examples;
 
+import jdk.jfr.Label;
+
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -56,8 +59,13 @@ public class ReflectionExample {
         year = getYearMethod.invoke(carObject);
         System.out.println("Year: " + year);
 
+        for(Annotation annotation : carCls.getDeclaredAnnotations()) {
+            System.out.println("==== Annotation: " + annotation.annotationType().getName());
+        }
+
         Car ferrari = new Car("Ferrari", 2017);
         Class ferrariCls = ferrari.getClass();
+
         Field yearFieldOfFerrari = ferrariCls.getDeclaredField("year");
         yearFieldOfFerrari.setAccessible(true);
         yearFieldOfFerrari.set(ferrari, 2024);
@@ -68,6 +76,7 @@ public class ReflectionExample {
 interface Vehicle {
 }
 
+@Label("Cool car")
 class Car implements Vehicle {
     private String model;
     private int year;
