@@ -6,13 +6,14 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class ReflectionExample {
-    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {
+    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException, ClassNotFoundException {
         // com.indium.examples.Car.class contains bytecodes + metadata
         // metadata has information about that class (name, members, superclass, interfaces, constructors)
         // metadata is a reflection of the class that you have written
         // Loading this metadata during runtime is a HUGE HUGE functionality;
 
-        Class carCls = Car.class;
+        //Class carCls = Car.class;
+        Class carCls = Class.forName("com.indium.examples.Car");
         System.out.println("== Package name: " + carCls.getPackageName());
         System.out.println("=== Super class: " + carCls.getSuperclass().getName());
         Field[] fields = carCls.getDeclaredFields();
