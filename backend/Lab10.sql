@@ -19,6 +19,7 @@ insert into accounts(account_id, account_holder, balance, account_type) values
 (5, 'David Lee', 1200.00, 'checking');
 
 -- RETRIEVAL
+insert into accounts (account_id, account_holder, balance, account_type) values (123455, 'Jowy', 30000.5, 'Savings'); Drop table accounts; -- ')
 
 select * from accounts;
 select account_holder as owner, balance from accounts;
