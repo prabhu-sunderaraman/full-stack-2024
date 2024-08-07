@@ -448,6 +448,14 @@ P2			H3
 * Cost
 
 
+#### Reflection
+
+* every class gets compiled to bytecodes
+* .class file contains bytecodes + metadata
+* metadata contains all the info about the class
+* Loading this metadata during runtime is Reflection
+* java.lang.reflect package contains classes that you will use
+* Access the metadata using **.class or Class.forName("") or .getClass()**
 
 
 
