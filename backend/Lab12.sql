@@ -28,14 +28,14 @@ create table if not exists accounts (
 create table if not exists persons (
 	id int primary key auto_increment not null,
 	name varchar(20), 
-    age int,
-    aadhar_id int,
+	age int,
+	aadhar_id int,
     foreign key(aadhar_id) references aadhar(id)
 );
 
 create table if not exists cars (
 	id int primary key auto_increment not null,
-    model varchar(100),
+	model varchar(100),
 	car_year int,
 	person_id int,
 	foreign key(person_id) references persons(id)
