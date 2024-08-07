@@ -19,3 +19,4 @@ maintain atomicity for example don't do this (column called cars (bmw, ferrari))
 * each person has one aadhar card **one-to-one**
 
 
+
