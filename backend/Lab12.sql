@@ -10,9 +10,9 @@
 use training;
 
 create table if not exists aadhar (
-   id int primary key auto_increment not null,
-   aadhar_number int,
-   UNIQUE INDEX `aadhar_number_UNIQUE` (`aadhar_number` ASC) VISIBLE
+	id int primary key auto_increment not null,
+	aadhar_number int,
+	UNIQUE INDEX `aadhar_number_UNIQUE` (`aadhar_number` ASC) VISIBLE
 );
 
 
@@ -30,7 +30,7 @@ create table if not exists persons (
 	name varchar(20), 
 	age int,
 	aadhar_id int,
-    foreign key(aadhar_id) references aadhar(id)
+	foreign key(aadhar_id) references aadhar(id)
 );
 
 create table if not exists cars (
@@ -43,7 +43,7 @@ create table if not exists cars (
 
 
 create table if not exists person_account (
-  person_id int,
-  account_id int,
-  primary key(person_id,account_id)
+	person_id int,
+	account_id int,
+	primary key(person_id,account_id)
 );
