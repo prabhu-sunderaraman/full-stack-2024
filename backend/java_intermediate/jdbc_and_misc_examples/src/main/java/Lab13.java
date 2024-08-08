@@ -21,6 +21,7 @@ public class Lab13 {
                 MyThreadUtil.sleep(10);
             }
         });
+        dbThread.setPriority(1);
         dbThread.setName("db-thread");
         dbThread.start();
     }
