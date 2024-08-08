@@ -1,8 +1,8 @@
 public class ConcurrencyBasics {
     public static void main(String[] args) {
         // Golang, Erlang, Scala
-        int numberOfCpuCores = Runtime.getRuntime().availableProcessors();
-        System.out.println("Number of cores: " + numberOfCpuCores);
+        int numberOfProcessors = Runtime.getRuntime().availableProcessors();
+        System.out.println("Number of processors: " + numberOfProcessors);
 
         // Concurrency vs. Parallelism
 
