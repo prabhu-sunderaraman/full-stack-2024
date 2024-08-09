@@ -458,6 +458,19 @@ P2			H3
 * Access the metadata using **.class or Class.forName("") or .getClass()**
 
 
+### Concurrency
+
+* Creating threads using Thread class is old style;
+* You can use the Thread pool classes in **java.util.concurrent** package
+* ExecutorService; fixed thread pool; cached thread pool; forkjoinpool
+* You can execute or submit a task (Runnable interface impl) to the thread pool
+* Parallel Stream make use a fork join pool; It creates (n - 1) worker threads, where n is the number of processors
+* You can create a custom forkjoinpool and execute your parallel stream code in it
+
+
+
+
+
 
 
 
