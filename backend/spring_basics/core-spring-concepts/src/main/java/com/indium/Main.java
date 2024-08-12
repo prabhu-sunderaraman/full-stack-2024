@@ -1,13 +1,17 @@
 package com.indium;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
+// Spring framework is called a lightweight container
+// container manages the lifecycle of all the objects
 public class Main {
     public static void main(String[] args) {
 
-        ApplicationContext context =
-                new FileSystemXmlApplicationContext("classpath:beans.xml");
+//        ApplicationContext context =
+//                new FileSystemXmlApplicationContext("classpath:beans.xml");
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.indium");
 
         Person person = context.getBean("person", Person.class);
         System.out.println(person.getName() + ", " + person.getAge());
