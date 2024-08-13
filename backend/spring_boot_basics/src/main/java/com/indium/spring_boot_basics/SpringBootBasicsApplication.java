@@ -37,6 +37,7 @@ public class SpringBootBasicsApplication implements CommandLineRunner {
 //        door.close();
 //        System.out.println(person.getName());
 //        System.out.println(car.getModel());
-//        person.getHobbies().forEach(System.out::println);
+        person.getHobbies().forEach(System.out::println);
+        person.getCitiesVisited().forEach(System.out::println);
     }
 }
