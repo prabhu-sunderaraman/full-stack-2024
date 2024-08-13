@@ -52,3 +52,12 @@
 
 
 ##### e2e(End 2 End) testing
+
+* Install Cypress **sudo npm i --save-dev cypress**
+* Start your application **sudo npm run start**
+* Open another terminal window and run **sudo npx cypress open**
+* Cypress window opens
+* Select **"Configure E2E testing"**
+* Create a new spec say calc.cy.js
+* You will notice a file calc.cy.js in [cypress] folder in your project
+* Start editing the file and add your tests

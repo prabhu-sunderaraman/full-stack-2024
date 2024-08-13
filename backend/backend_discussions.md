@@ -35,6 +35,39 @@
 * Spring framework will create all of them and inject them to you
 
 
+### Core concepts
+
+* Spring is a lightweight container
+* ApplicationContext acts as a container
+* It loads all the **@Component** and instantiates them during startup (change it using **@Lazy**)
+* By default, all the beans are in singleton scope; Change the scope using **@Scope**
+* Inject values using **@Value** and **@Autowired**
+* Two types of DI; Field-based / Constructor based
+* You can specify the beans of same type using **@Qualifier** or **@Primary**
+
+### Spring boot
+
+* Though Spring makes application development a breeze, developers had to do a lot of plumbing work
+* It wasn't very agile like NodeJS or even Python
+* Pressure from the Spring community to make it as competitive as building applications using NodeJS
+* Should be agile; very lightweight; and focus on the code and not installing, configuring entities
+* Spring boot comes to rescue
+* How do you bootstrap working with Spring applications? 
+* Spring boot is just built on the top of Spring; It's an abstraction of Core Spring
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

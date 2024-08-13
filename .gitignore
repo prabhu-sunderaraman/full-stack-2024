@@ -30,3 +30,5 @@ Icon^
 .class
 .jar
 target
+node_modules
+.lock
