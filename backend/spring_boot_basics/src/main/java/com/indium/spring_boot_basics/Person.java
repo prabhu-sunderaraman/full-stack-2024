@@ -12,7 +12,7 @@ public class Person {
     @Value("Sam")
     private String name;
 
-    @Value("${cities}")
+    @Value("${cities: []}")
     private List<String> citiesVisited;
 
     @Autowired

@@ -54,6 +54,7 @@
 * Spring boot comes to rescue
 * How do you bootstrap working with Spring applications? 
 * Spring boot is just built on the top of Spring; It's an abstraction of Core Spring
+* Latest version is 3.x
 
 
 

@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring_boot_basics
+db:
+  username: root
+  password: root12344
+  connection-string: jdbc:mysql://localhost/training
+  schemas:
+    - poc
+    - public
+    - test
+  users:
+    testuser: testpwd
+    testuser2: testpwd2
+
+cities:
+  - Chennai
+  - Houston
+  - Tokyo
+  - Paris
