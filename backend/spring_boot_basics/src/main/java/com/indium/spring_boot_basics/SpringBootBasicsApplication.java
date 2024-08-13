@@ -25,11 +25,18 @@ public class SpringBootBasicsApplication implements CommandLineRunner {
     @Autowired
     Car car;
 
+    @Autowired
+    MyDatabaseCredentials myDatabaseCredentials;
+
     @Override
     public void run(String... args) throws Exception {
-        door.open();
-        door.close();
+        System.out.println(myDatabaseCredentials.getUsername());
+        System.out.println(myDatabaseCredentials.getPassword());
+        System.out.println(myDatabaseCredentials.getConnectionString());
+//        door.open();
+//        door.close();
 //        System.out.println(person.getName());
 //        System.out.println(car.getModel());
+//        person.getHobbies().forEach(System.out::println);
     }
 }
