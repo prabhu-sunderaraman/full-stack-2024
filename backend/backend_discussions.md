@@ -68,6 +68,29 @@
 * **application.yaml** reads from top to bottom; avoid repetition
 * You can group items and refer to them using **@ConfigurationProperties(prefix="")**
 
+#### Working with Raw JDBC API
+
+* Say you want to retrieve a list of persons from db
+* Add the driver dependency to pom.xml
+* Load the driver
+* Create a connection
+* create a preparedstatement
+* **execute the query** -> SHOULD BE THE FOCUS
+* get the resultset
+* process the resultset
+* close the connection
+* handle exceptions using try, catch, finally, throws
+
+
+
+
+
+
+
+
+
+
+
 
 
 
