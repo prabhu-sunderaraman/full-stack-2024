@@ -1,4 +1,4 @@
-package com.indium.spring_boot_basics;
+package com.indium.springbootbasics;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

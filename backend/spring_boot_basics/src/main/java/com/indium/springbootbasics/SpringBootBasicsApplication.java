@@ -1,12 +1,16 @@
-package com.indium.spring_boot_basics;
+package com.indium.springbootbasics;
 
-import com.indium.spring_boot_basics.labs.lab01.Door;
+import com.indium.springbootbasics.labs.lab01.Door;
+import com.labs.lab02.Conference;
+import com.labs.lab02.SessionPlanner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = "com")
 public class SpringBootBasicsApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
@@ -28,11 +32,25 @@ public class SpringBootBasicsApplication implements CommandLineRunner {
     @Autowired
     MyDatabaseCredentials myDatabaseCredentials;
 
+    @Autowired
+    Conference conference;
+
+    @Autowired
+    SessionPlanner sessionPlanner;
+
     @Override
     public void run(String... args) throws Exception {
-        System.out.println(myDatabaseCredentials.getUsername());
-        System.out.println(myDatabaseCredentials.getPassword());
-        System.out.println(myDatabaseCredentials.getConnectionString());
+
+        sessionPlanner.getTopics().forEach(System.out::println);
+
+//        conference.getTopics().get(45).forEach(System.out::println);
+//        conference.getTopics().get(60).forEach(System.out::println);
+//        conference.getTopics().get(90).forEach(System.out::println);
+
+
+//        System.out.println(myDatabaseCredentials.getUsername());
+//        System.out.println(myDatabaseCredentials.getPassword());
+//        System.out.println(myDatabaseCredentials.getConnectionString());
 //        door.open();
 //        door.close();
 //        System.out.println(person.getName());
@@ -41,7 +59,7 @@ public class SpringBootBasicsApplication implements CommandLineRunner {
 //        person.getHobbies().forEach(System.out::println);
 //        person.getCitiesVisited().forEach(System.out::println);
 
-        myDatabaseCredentials.getSchemas().forEach(System.out::println);
-        myDatabaseCredentials.getUsers().forEach((key, value) -> System.out.println(key + ": " + value));
+//        myDatabaseCredentials.getSchemas().forEach(System.out::println);
+//        myDatabaseCredentials.getUsers().forEach((key, value) -> System.out.println(key + ": " + value));
     }
 }

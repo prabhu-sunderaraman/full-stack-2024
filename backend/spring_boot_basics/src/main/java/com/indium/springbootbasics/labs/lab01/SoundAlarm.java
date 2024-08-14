@@ -1,4 +1,4 @@
-package com.indium.spring_boot_basics.labs.lab01;
+package com.indium.springbootbasics.labs.lab01;
 
 import org.springframework.stereotype.Component;
 

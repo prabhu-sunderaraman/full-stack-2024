@@ -1,4 +1,4 @@
-package com.indium.spring_boot_basics;
+package com.indium.springbootbasics;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

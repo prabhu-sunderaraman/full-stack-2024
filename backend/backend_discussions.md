@@ -56,7 +56,26 @@
 * Spring boot is just built on the top of Spring; It's an abstraction of Core Spring
 * Latest version is 3.x
 
+### Spring boot project
 
+* You can create a project choose templates by going to start.spring.io
+* Command line applications; 
+* Main class implements CommandLineRunner interface which can serve as a starting point
+* You can configure extra beans by using **@Configuration** and **@Bean**
+* By default you have **application.properties** in resources folder; Similar to .env file in NodeJS or React environments
+* You access the properties using **"${}"**
+* properties files are old-fashioned; YAML files are preferred now
+* **application.yaml** reads from top to bottom; avoid repetition
+* You can group items and refer to them using **@ConfigurationProperties(prefix="")**
+
+
+
+
+
+
+
+
+ 
 
 
 

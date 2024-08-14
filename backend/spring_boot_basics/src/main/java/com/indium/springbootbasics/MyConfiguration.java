@@ -1,4 +1,4 @@
-package com.indium.spring_boot_basics;
+package com.indium.springbootbasics;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
