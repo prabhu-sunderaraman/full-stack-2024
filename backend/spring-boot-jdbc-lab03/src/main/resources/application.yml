@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: spring-boot-jdbc-lab03
+
+  datasource:
+    password: root
+    username: root
+    url: jdbc:mysql://localhost:3306/training
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
