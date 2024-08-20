@@ -39,7 +39,7 @@ public class TopicDao {
     }
 
     public void incrementSummaryCount(int duration) {
-        String sql = "INSERT INTO summary (duration, count) " +
+        String sql = "INSERT INTO summary (duration, coun) " +
                 "VALUES (?, 1) ON DUPLICATE KEY UPDATE count = count + 1";
         jdbcTemplate.update(sql, duration);
     }

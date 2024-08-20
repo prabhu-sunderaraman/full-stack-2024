@@ -21,10 +21,11 @@ public class SpringBootJdbcLab03Application implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        conferenceService.addTopic("LLM", 190);
 //        conferenceService.addTopic("RoR", 90);
 //        conferenceService.addTopic("Scala tricks", 60);
 //        conferenceService.addTopic("Goroutines", 90);
-        conferenceService.removeTopic("RoR");
+//        conferenceService.removeTopic("RoR");
         List<Topic> topics = conferenceService.getAllTopics();
         topics.forEach(System.out::println);
     }
