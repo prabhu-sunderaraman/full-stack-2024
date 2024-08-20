@@ -37,4 +37,15 @@ public class TopicDao {
         String sql = "Delete from topics where title like ?";
         jdbcTemplate.update(sql, title);
     }
+
+    public void incrementSummaryCount(int duration) {
+        String sql = "INSERT INTO summary (duration, count) " +
+                "VALUES (?, 1) ON DUPLICATE KEY UPDATE count = count + 1";
+        jdbcTemplate.update(sql, duration);
+    }
+
+    public void decrementSummaryCount(int duration) {
+        String sql = "UPDATE summary set count = count - 1 where duration=?";
+        jdbcTemplate.update(sql, duration);
+    }
 }
