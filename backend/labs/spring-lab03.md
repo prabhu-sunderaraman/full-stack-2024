@@ -48,3 +48,47 @@ Concurrency on the JVM - 60 min
 Goroutines - 45 min
 RoR - 90 min
 ```
+
+#### Part II
+
+* Let's enhance the functionality of addTopic() method in ConferenceService.
+* Create a table **summary, with id(primary key auto_increment), duration(int) and count(int)**
+
+* Whenever you add a topic, let's perform an extra DB operation to update the count column in the summary table.
+* So if you insert two 90 mins topics and three 45mins topic, the summary table will look like below
+
+```
+| id | duration | count |
+-------------------------
+| 1  |  90     |  2   |
+| 2  |  45     |  3   |
+
+```
+
+* You'll learn **"Transactions support"** in this code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
