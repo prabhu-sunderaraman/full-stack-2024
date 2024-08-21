@@ -14,9 +14,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
 
-
+@Primary
 @Service
-public class ConferenceService {
+public class ConferenceService2 {
     @Autowired
     TopicRepository topicRepository;
 
@@ -32,7 +32,8 @@ public class ConferenceService {
         topic.setTitle(title);
         topic.setDuration(duration);
         topicRepository.save(topic);
-        incrementSummaryCountForDuration(duration);
+        summaryRepository.incrementCount(duration);
+        //incrementSummaryCountForDuration(duration);
     }
 
     private void incrementSummaryCountForDuration(int duration) {
@@ -63,11 +64,17 @@ public class ConferenceService {
     @Transactional
     public void removeTopic(String title) {
         Topic topic = topicRepository.findByTitle(title).orElseThrow(() -> new TopicNotFoundException(title));
-        topicRepository.delete(topic);
-        decrementSummaryCountForDuration(topic.getDuration());
+//        topicRepository.delete(topic);
+        topicRepository.removeTopicByTitle(title);
+        summaryRepository.decrementCount(topic.getDuration());
+//        decrementSummaryCountForDuration(topic.getDuration());
+    }
+
+    public List<String> getAllTitles() {
+        return topicRepository.getAllTopicNames();
     }
 
     public List<Topic> getAllTopics() {
-        return topicRepository.findAll();
+        return topicRepository.fetchAllTopics();
     }
 }

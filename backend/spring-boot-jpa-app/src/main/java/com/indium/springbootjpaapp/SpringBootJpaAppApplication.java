@@ -1,6 +1,7 @@
 package com.indium.springbootjpaapp;
 
 import com.indium.springbootjpaapp.lab03.service.ConferenceService;
+import com.indium.springbootjpaapp.lab03.service.ConferenceService2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -23,15 +24,16 @@ public class SpringBootJpaAppApplication implements CommandLineRunner {
     CarRepository carRepository;
 
     @Autowired
-    ConferenceService conferenceService;
+    ConferenceService2 conferenceService;
 
     @Override
     public void run(String... args) throws Exception {
 
-//        conferenceService.addTopic("Spring boot", 120);
+//        conferenceService.addTopic("Kafka", 120);
 //        conferenceService.addTopic("Golang", 90);
-        conferenceService.removeTopic("RoR");
-        conferenceService.getAllTopics().forEach(System.out::println);
+        conferenceService.removeTopic("Golang");
+//        conferenceService.getAllTopics().forEach(System.out::println);
+        conferenceService.getAllTitles().forEach(System.out::println);
 
 //        Car car1 = new Car();
 //        car1.setModel("Ferrari");
