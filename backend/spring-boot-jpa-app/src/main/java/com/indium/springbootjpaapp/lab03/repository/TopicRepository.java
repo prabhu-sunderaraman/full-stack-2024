@@ -17,10 +17,17 @@ public interface TopicRepository extends CrudRepository<Topic, Integer> {
     @Query(value = "FROM Topic")
     List<Topic> fetchAllTopics();
 
-    @Query(value = "Select title from Topic")
+//    @Query(value = "Select title from Topic")
+//    List<String> getAllTopicNames();
+
+    @Query(value = "Select title from topics", nativeQuery = true)
     List<String> getAllTopicNames();
 
+//    @Modifying
+//    @Query(value = "delete from Topic t where t.title = :p1")
+//    void removeTopicByTitle(@Param("p1") String title);
+
     @Modifying
-    @Query(value = "delete from Topic t where t.title = :p1")
+    @Query(value = "delete from topics t where t.title = :p1", nativeQuery = true)
     void removeTopicByTitle(@Param("p1") String title);
 }
