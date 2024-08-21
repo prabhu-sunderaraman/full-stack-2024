@@ -1,5 +1,6 @@
 package com.indium.springbootjpaapp;
 
+import com.indium.springbootjpaapp.lab03.service.ConferenceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -21,8 +22,16 @@ public class SpringBootJpaAppApplication implements CommandLineRunner {
     @Autowired
     CarRepository carRepository;
 
+    @Autowired
+    ConferenceService conferenceService;
+
     @Override
     public void run(String... args) throws Exception {
+
+//        conferenceService.addTopic("Spring boot", 120);
+//        conferenceService.addTopic("Golang", 90);
+        conferenceService.removeTopic("RoR");
+        conferenceService.getAllTopics().forEach(System.out::println);
 
 //        Car car1 = new Car();
 //        car1.setModel("Ferrari");
@@ -34,10 +43,10 @@ public class SpringBootJpaAppApplication implements CommandLineRunner {
 //        Iterable<Car> cars = carRepository.findAll();
 //        cars.forEach(System.out::println);
 
-        carRepository.findAllByModel("BMW").forEach(System.out::println);
-        carRepository.findAllByModelAndYearOfMake("Ferrari", 2022).forEach(System.out::println);
-        carRepository.findAllByYearOfMake(2024).forEach(System.out::println);
-        carRepository.findAllByYearOfMakeBetween(2000, 2024).forEach(System.out::println);
+//        carRepository.findAllByModel("BMW").forEach(System.out::println);
+//        carRepository.findAllByModelAndYearOfMake("Ferrari", 2022).forEach(System.out::println);
+//        carRepository.findAllByYearOfMake(2024).forEach(System.out::println);
+//        carRepository.findAllByYearOfMakeBetween(2000, 2024).forEach(System.out::println);
 
 //        Person p = new Person();
 //        p.setName("Mary");
