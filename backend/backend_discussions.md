@@ -82,6 +82,29 @@
 * handle exceptions using try, catch, finally, throws
 
 
+#### JPA
+
+* JDBC is not a fit, if your db design is complex with number of relationships and column count;
+* You have to handle a lot of SQL queries with complex joins 
+* SQL syntax is too tied to the database; and changing the db will force you to change the code as well
+* ORM -> Object Relational Database Mapping 
+* Create classes that map with tables; Map the class with the table; Map the properties with the columns
+* Several frameworks available to implement ORM in Java. TopLink, JDO, Hibernate, myBatis
+* JPA -> Jakarta(or Java) Persistence API is an uniform API to access any ORM library from Java application
+* Spring Boot JPA takes the convenience a step forward; 
+* You create a Spring boot project and add JPA dependency; Automatically hibernate impl of JPA is added
+* You create an Entity class and map it with the table; **@Column, @Entity, @Table, @Id**
+* You define a DAO or repository; interface that extends CrudRepository or JpaRepository 
+* save, findAll, findById, delete 
+
+### @Transactional
+
+* You want to declaratively manage transactions in your code;
+* Configure your method to act in a transaction context;
+* So only when all the operations are successful, txn is commited; Even if one of them fails, all the db operations are rolled back
+* Add **@Transactional** annotation to the method, and the magic happens during runtime
+
+
 
 
 
