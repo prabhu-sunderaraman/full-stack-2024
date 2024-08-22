@@ -96,6 +96,10 @@
 * You create an Entity class and map it with the table; **@Column, @Entity, @Table, @Id**
 * You define a DAO or repository; interface that extends CrudRepository or JpaRepository 
 * save, findAll, findById, delete 
+* finder methods in the repository interface; findBy or findAllBy
+* @Query - JPQL; Query classes and properties
+* You can also write native query, using **nativeQuery=true**
+
 
 ### @Transactional
 
