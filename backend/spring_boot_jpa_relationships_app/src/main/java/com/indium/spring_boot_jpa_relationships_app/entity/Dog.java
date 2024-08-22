@@ -3,21 +3,13 @@ package com.indium.spring_boot_jpa_relationships_app.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Set;
-
 @Entity
-@Table(name = "persons")
+@Table(name = "dogs")
 @Data
-public class Person {
+public class Dog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column
-    private String name;
-    @Column
-    private int age;
-
-    @OneToMany
-    @JoinColumn(name = "person_id")
-    private Set<Dog> dogs;
+    private String breed;
 }

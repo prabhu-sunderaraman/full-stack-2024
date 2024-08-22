@@ -1,14 +1,18 @@
 package com.indium.spring_boot_jpa_relationships_app.service;
 
 import com.indium.spring_boot_jpa_relationships_app.entity.Car;
+import com.indium.spring_boot_jpa_relationships_app.entity.Dog;
 import com.indium.spring_boot_jpa_relationships_app.entity.Person;
 import com.indium.spring_boot_jpa_relationships_app.repository.CarRepository;
+import com.indium.spring_boot_jpa_relationships_app.repository.DogRepository;
 import com.indium.spring_boot_jpa_relationships_app.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 public class PersonService {
@@ -17,12 +21,28 @@ public class PersonService {
 
     @Autowired
     CarRepository carRepository;
+    @Autowired
+    private DogRepository dogRepository;
 
     @Transactional
-    public void savePersonWith2Cars() {
+    public void savePersonWith2CarsAnd2Dogs() {
+        Dog dog1 = new Dog();
+        dog1.setBreed("Lab");
+        dogRepository.save(dog1);
+
+        Dog dog2 = new Dog();
+        dog2.setBreed("Dob");
+        dogRepository.save(dog2);
+
         Person person1 = new Person();
         person1.setName("Sam");
         person1.setAge(40);
+
+        Set<Dog> dogs = new HashSet<>();
+        dogs.add(dog1);
+        dogs.add(dog2);
+        person1.setDogs(dogs);
+
         personRepository.save(person1);
 
         Car car1 = new Car();

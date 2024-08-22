@@ -18,6 +18,6 @@ public class SpringBootJpaRelationshipsAppApplication implements CommandLineRunn
 
     @Override
     public void run(String... args) throws Exception {
-        personService.savePersonWith2Cars();
+        personService.savePersonWith2CarsAnd2Dogs();
     }
 }
