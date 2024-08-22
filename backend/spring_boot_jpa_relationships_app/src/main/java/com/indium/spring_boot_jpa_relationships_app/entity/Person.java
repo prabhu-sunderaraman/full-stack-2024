@@ -20,4 +20,8 @@ public class Person {
     @OneToMany
     @JoinColumn(name = "person_id")
     private Set<Dog> dogs;
+
+    @OneToOne
+    @JoinColumn(name = "aadhar_id")
+    private Aadhar aadhar;
 }
