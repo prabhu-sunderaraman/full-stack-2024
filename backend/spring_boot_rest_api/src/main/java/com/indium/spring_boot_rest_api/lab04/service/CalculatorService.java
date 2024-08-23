@@ -15,4 +15,8 @@ public class CalculatorService {
     public int multiply(int a, int b) {
         return a * b;
     }
+
+    public double divide(int num1, int num2) {
+        return num1 / num2;
+    }
 }
