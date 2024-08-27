@@ -109,7 +109,19 @@
 * Add **@Transactional** annotation to the method, and the magic happens during runtime
 
 
+### REST API
 
+* Create controllers annotating them with @RestController
+* @GetMapping, @PostMapping, @PatchMapping, @PutMapping, @DeleteMapping
+* @PathVariable, @RequestParam, @RequestBody
+* The url patterns should have **nouns** and preferrably **plurals**.
+* POST -> Create something
+* GET -> Fetching
+* PUT -> Updates all the items except the primary key value or sometimes used to Upsert
+* PATCH -> update specific items
+* DELETE -> deleting something
+
+* **Flow:** Controller -> Service -> Utils, Models, Repository -> Entity
 
 
 
