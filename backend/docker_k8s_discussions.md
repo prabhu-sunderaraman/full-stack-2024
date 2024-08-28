@@ -67,9 +67,24 @@ docker run -p 8080:80 \
 
 
 
+### Some commands
 
+```
+docker images
+docker rmi -f <imageId>
+docker ps
+docker logs <containerId>
+docker stop <containerId>	
+docker run --rm 	
+```
 
+* **--rm** option is used while starting a container to remove it on stop
 
+### build
+
+```
+docker build -t my-rest-api:0.0.1 .
+```
 
 
 
