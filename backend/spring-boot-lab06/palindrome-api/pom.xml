@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.indium</groupId>
     <artifactId>palindrome-api</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>palindrome-api</name>
     <description>palindrome-api</description>
     <url/>

@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.indium</groupId>
     <artifactId>word-games-api</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>word-games-api</name>
     <description>word-games-api</description>
     <url/>
