@@ -6,4 +6,4 @@ server:
   port: 8080
 
 palindrome-api:
-  base-url: http://localhost:8081
+  base-url: <lakshmipriya home address>
