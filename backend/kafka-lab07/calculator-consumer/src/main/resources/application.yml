@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: calculator-consumer
+  kafka:
+    bootstrap-servers: localhost:9092
+    security:
+      protocol: PLAINTEXT
+      SASL:
+        mechanism: PLAIN
+    consumer:
+      auto-offset-reset: earliest
+      value-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+      group-id: calculator-consumer-group-dev
+
+calculator:
+  topic: calculator-topic
