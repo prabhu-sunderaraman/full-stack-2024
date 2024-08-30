@@ -125,7 +125,42 @@
 
 
 
+### Communications between applications
 
+* Two applications can talk to each other using
+
+* File system (locking, concurrency, synchronization)
+* Database (expensive, notifications)
+* Synchronous (Directly invoke; Security, Latency; Change in contract)
+* Asynchronous (**involves a middleware**)
+
+
+### MoM
+
+* Message Oriented Middleware or Message Broker
+* RabbitMQ, ActiveMQ, IBM MQ series, AWS Kinesis, Azure Event Grid, Apache Kafka, Confluent Kafka
+* Message broker is not a substitute of DB
+* DB is a persistent store
+* By default, most of the messages are present for 7 days or a max of say 30 days. Expensive to retain the messages for a longer period
+* Two messaging models -> Publisher/Subscriber model; P2P -> Point-to-Point model
+
+### Kafka
+
+* If your objective is to make two applications talk to each other in an async manner you don't need kafka for that
+* If you want to stream a millions of messages at a very high frequency
+* Developed by LinkedIn
+* Apache Kafka(https://kafka.apache.org/)  / Confluent Kafka
+* Message? -> contains data(binary, json, text, avro) + header + timestamp
+* Event? -> action + data
+* Used to stream incredibly huge number of events for processing
+* Supports Publisher/Subscriber model; Broadcast
+
+
+### Producer and Consumer
+
+* Create an empty project -> **kafka-app**
+* Create a new module -> **producer-api**. {Spring Web, Spring kafka}
+* Create a new module -> **consumer-app**. {Spring kafka}
 
 
 
