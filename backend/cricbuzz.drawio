@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-08-30T09:21:31.732Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" etag="6TzcsV7ReU8vYP7pMjcL" version="24.6.5" type="device">
+<mxfile host="app.diagrams.net" modified="2024-08-30T09:28:13.682Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" etag="LLSvL0gbI8_e5np7Niis" version="24.6.5" type="device">
   <diagram name="Simple architecture" id="oTdZrRDxeM_kzWt5eh7-">
-    <mxGraphModel dx="1194" dy="615" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1194" dy="1715" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -121,6 +121,20 @@
         </mxCell>
         <mxCell id="5g65gb1R4huNtyx6foxI-34" value="Millions of Airtel subscribers" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="210" y="670" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5g65gb1R4huNtyx6foxI-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5g65gb1R4huNtyx6foxI-40" target="5g65gb1R4huNtyx6foxI-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5g65gb1R4huNtyx6foxI-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5g65gb1R4huNtyx6foxI-40" target="5g65gb1R4huNtyx6foxI-43">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="790" y="40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5g65gb1R4huNtyx6foxI-40" value="Processing&lt;div&gt;Consumer&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="730" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5g65gb1R4huNtyx6foxI-43" value="DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="780" y="-10" width="40" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
