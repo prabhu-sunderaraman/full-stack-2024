@@ -6,4 +6,6 @@ spring:
     properties:
       security.protocol: PLAINTEXT
       SASL_MECHANISM: PLAIN
+    consumer:
+      auto-offset-reset: earliest
 
