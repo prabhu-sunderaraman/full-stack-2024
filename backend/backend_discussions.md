@@ -162,6 +162,16 @@
 * Create a new module -> **producer-api**. {Spring Web, Spring kafka}
 * Create a new module -> **consumer-app**. {Spring kafka}
 
+### Basics of Kafka
+
+* Create a topic with n partitions
+* Producer to produce messages
+* Each message has a key, value, header, timestamp
+* You can serialize messages to any format you want
+* Consumer consumes messages
+* Consumer needs to specify the consumer group id;
+* Kafka maintains the offset of every consumer group; It makes sure that every message is delivered only once
+* You can multiple consumers belonging to the same consumer id; and only one of them is going to be active (**when partition count is 1**)
 
 
 

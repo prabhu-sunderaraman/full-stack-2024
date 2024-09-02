@@ -6,6 +6,8 @@ spring:
     properties:
       security.protocol: PLAINTEXT
       SASL_MECHANISM: PLAIN
+    producer:
+      value-serializer: org.apache.kafka.common.serialization.DoubleSerializer
 server:
   port: 8081
 
