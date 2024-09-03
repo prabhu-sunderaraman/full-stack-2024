@@ -95,6 +95,7 @@ docker build -t my-rest-api:0.0.1 .
 * A pod is a wrapper to the container
 * So when somebody says **Kubernetize your application**; this is what she means
 * Create an application; containerize it using docker(or podman); convert the docker image to a POD and deploy them
+* When you kubernetize your application; k8s makes sure that your application IS ALWAYS UP AND RUNNING;
 
 ### Working with k8s
 
@@ -115,7 +116,12 @@ kubectl config get-contexts
 ```
 kubectl get pods
 kubectl run food-api-pod --image=food-api:0.0.1
+kubectl delete pod food-api-pod
+kubectl apply -f food-api-config-k8s.yaml
+kubectl delete -f food-api-config-k8s.yaml
+kubectl get deployments
 ```
+
 
 
 
