@@ -104,6 +104,18 @@ docker build -t my-rest-api:0.0.1 .
 kubectl version
 ```
 
+* Enabling Kubernetes in Docker Desktop; by default creates a single node cluster - called **docker-desktop**
+
+```
+kubectl config get-contexts
+```
+
+
+
+
+
+
+
 
 
 
