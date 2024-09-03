@@ -1,4 +1,4 @@
-FROM eclipse-temurin:22
+FROM eclipse-temurin:22-alpine
 
 COPY target/word-games-api-0.0.1.jar app.jar
 

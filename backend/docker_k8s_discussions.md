@@ -133,6 +133,16 @@ kubetctl get hpa
 
 
 
+#### Cluster
+
+* Kafka cluster -> n number of kafka servers interconnected with each other to form a cluster. each item in the cluster is referred to as node
+* MySQL cluster -> n number of mysql servers interconnected with each other to form a cluster. each item in the cluster is referred to as node
+* Kubernetes cluster -> n number of kubernetes servers interconnected with each other. 
+
+* Node refers to a VM or a physical machine or a server or a sofware application
+
+
+
 
 
 

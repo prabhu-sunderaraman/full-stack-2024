@@ -3,7 +3,4 @@ spring:
     name: palindrome-api
 
 server:
-  port: 7000
-
-# -p9000:8080
-# -p9000:7000
+  port: 8080
