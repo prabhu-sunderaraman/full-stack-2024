@@ -87,9 +87,22 @@ docker build -t my-rest-api:0.0.1 .
 ```
 
 
+### k8s
 
+* Orchestration tool
+* manage the containers; scalability
+* Basic building block of k8s is **POD**
+* A pod is a wrapper to the container
+* So when somebody says **Kubernetize your application**; this is what she means
+* Create an application; containerize it using docker(or podman); convert the docker image to a POD and deploy them
 
+### Working with k8s
 
+* "Enable Kubernetes" in Docker Desktop, you get all the tools to work with k8s
+
+```
+kubectl version
+```
 
 
 

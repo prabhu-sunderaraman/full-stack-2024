@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: food-api
+
+welcome:
+  message: Welcome to the Food API

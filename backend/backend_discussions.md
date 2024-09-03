@@ -1,3 +1,14 @@
+### ToDo
+
+* Many-to-Many in JPA
+* error handling/json in Kafka
+* docker compose
+* env in docker compose
+* set up  k8s
+* scale up/down k8s
+
+
+
 ### JSE (Spec)
 
 * JDK -> J2SE -> Java Standard Edition
@@ -173,6 +184,13 @@
 * Kafka maintains the offset of every consumer group; It makes sure that every message is delivered only once
 * You can multiple consumers belonging to the same consumer id; and only one of them is going to be active (**when partition count is 1**)
 
+* Partition helps you distribute the processing of messages in a topic
+* Each topic needs to specify a partition count during creation (cannot alter the partition after you create the topic)
+* number of partitions is directly proportional to the cost
+* Consumer group is linked with partitions
+* If you want to scale up your consumer applications, you need to be aware of the partition count
+* If you have 3 partitions, 3 or less number of consumers is adequate. more than 3, you are wasting your resources
+* If you have 100 partitions, you can have 100 consumer instances and not more
 
 
 

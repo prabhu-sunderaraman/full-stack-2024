@@ -9,5 +9,5 @@ spring:
     producer:
       value-serializer: org.apache.kafka.common.serialization.DoubleSerializer
 server:
-  port: 8081
+  port: 8082
 
