@@ -17,6 +17,9 @@ spec:
       containers:
         - name: food-api
           image: food-api:0.0.1
+          env:
+            - name: WELCOME
+              value: WELCOME TO KUBERNETES FOOD API
           ports:
             - containerPort: 8080
           resources:
