@@ -110,7 +110,12 @@ kubectl version
 kubectl config get-contexts
 ```
 
+####  k8s commands
 
+```
+kubectl get pods
+kubectl run food-api-pod --image=food-api:0.0.1
+```
 
 
 
