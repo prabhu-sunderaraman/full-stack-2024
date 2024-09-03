@@ -142,7 +142,15 @@ kubetctl get hpa
 * Node refers to a VM or a physical machine or a server or a sofware application
 
 
+#### docker compose
 
+```
+docker compose -p lab06 -f docker-compose-lab06.yaml up --build -d
+```
+
+```
+docker compose -p lab06 -f docker-compose-lab06.yaml down
+```
 
 
 
