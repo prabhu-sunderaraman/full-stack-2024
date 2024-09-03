@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: food-api
+  name: food-api-deployment
   labels:
     app: food-api
 spec:
