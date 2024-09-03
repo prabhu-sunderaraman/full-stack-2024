@@ -123,6 +123,25 @@ kubectl get deployments
 kubetctl get hpa
 ```
 
+### How do you access the PODS?
+
+* Services come into picture
+* Service acts as a gateway to the pods
+* Three popular services available
+* NodePort(used mostly for dev/demo purposes); LoadBalancer;Ingress(Most widely used in production)
+* NodePort can run in ports btn 30000-32767
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
