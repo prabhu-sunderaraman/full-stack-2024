@@ -5,7 +5,7 @@ metadata:
   labels:
     app: food-api
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: food-api
@@ -19,3 +19,17 @@ spec:
           image: food-api:0.0.1
           ports:
             - containerPort: 8080
+
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: food-api-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: food-api-deployment
+  minReplicas: 2
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 80

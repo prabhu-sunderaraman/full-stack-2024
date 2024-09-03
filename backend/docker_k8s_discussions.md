@@ -120,6 +120,7 @@ kubectl delete pod food-api-pod
 kubectl apply -f food-api-config-k8s.yaml
 kubectl delete -f food-api-config-k8s.yaml
 kubectl get deployments
+kubetctl get hpa
 ```
 
 
