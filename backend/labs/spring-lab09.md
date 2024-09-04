@@ -9,7 +9,7 @@
 <br/>
 
 * Create a spring boot kafka consumer (movie-fetcher-app)
-* It listens to **movie-topic** and connects to http://www.omdbapi.com/?i=tt3896198&apikey=52d1c7f&t=<movieName> for response.
+* It listens to **movie-topic** and connects to http://www.omdbapi.com/?i=tt3896198&apikey=52d1c7f&t="movieName" for response.
 * It collects the response and writes to the cache	 
 
 <br/>
