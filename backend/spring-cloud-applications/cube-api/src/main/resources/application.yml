@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: cube-api
+server:
+  port: 9001
