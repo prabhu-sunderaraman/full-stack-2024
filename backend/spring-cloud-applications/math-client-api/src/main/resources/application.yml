@@ -5,9 +5,9 @@ server:
   port: 8080
 
 square-api:
-  url: http://localhost:9002
+  url: http://localhost:7001/square
 cube-api:
-  url: http://localhost:9001
+  url: http://localhost:7001/cube
 
 management:
   endpoints:
