@@ -1,0 +1,53 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" version="24.7.10">
+  <diagram name="Page-1" id="o5iMrtQIrVMyh-lJL-Je">
+    <mxGraphModel dx="1194" dy="615" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="mV07yj352aOMOmAoFhjY-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mV07yj352aOMOmAoFhjY-1" target="mV07yj352aOMOmAoFhjY-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mV07yj352aOMOmAoFhjY-1" value="math-client-api" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mV07yj352aOMOmAoFhjY-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="mV07yj352aOMOmAoFhjY-2" target="mV07yj352aOMOmAoFhjY-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mV07yj352aOMOmAoFhjY-2" value="square-api" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mV07yj352aOMOmAoFhjY-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mV07yj352aOMOmAoFhjY-3" target="mV07yj352aOMOmAoFhjY-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mV07yj352aOMOmAoFhjY-3" value="cube-api" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mV07yj352aOMOmAoFhjY-4" value="discovery-api&lt;div&gt;{eureka-server}&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="40" width="120" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="mV07yj352aOMOmAoFhjY-5" value="API-Gateway" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="180" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mV07yj352aOMOmAoFhjY-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="mV07yj352aOMOmAoFhjY-12" target="mV07yj352aOMOmAoFhjY-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mV07yj352aOMOmAoFhjY-19" value="heartbeats" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mV07yj352aOMOmAoFhjY-18">
+          <mxGeometry x="-0.0041" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mV07yj352aOMOmAoFhjY-12" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="50" y="30" width="510" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="mV07yj352aOMOmAoFhjY-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.025;entryY=0.483;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mV07yj352aOMOmAoFhjY-12" target="mV07yj352aOMOmAoFhjY-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mV07yj352aOMOmAoFhjY-17" value="registered&lt;div&gt;as&lt;/div&gt;&lt;div&gt;eureka-clients&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mV07yj352aOMOmAoFhjY-16">
+          <mxGeometry x="-0.0655" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

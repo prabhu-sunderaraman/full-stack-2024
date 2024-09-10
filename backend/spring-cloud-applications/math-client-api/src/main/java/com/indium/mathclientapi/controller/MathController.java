@@ -23,13 +23,13 @@ public class MathController {
 
     @GetMapping("/cube/{number}")
     public String getCubeOfNumber(@PathVariable int number) {
-        int cube = restTemplate.getForObject(cubeApiUrl + "/cube/" + number, Integer.class);
+        int cube = restTemplate.getForObject(cubeApiUrl + "/" + number, Integer.class);
         return "Cube of " + number + " is " + cube;
     }
 
     @GetMapping("/square/{number}")
     public String getSquareOfNumber(@PathVariable int number) {
-        int square = restTemplate.getForObject(squareApiUrl + "/square/" + number, Integer.class);
+        int square = restTemplate.getForObject(squareApiUrl + "/" + number, Integer.class);
         return "Square of " + number + " is " + square;
     }
 
