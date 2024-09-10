@@ -24,3 +24,19 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      cube-circuit:
+        minimum-number-of-calls: 3
+        wait-duration-in-open-state:
+          seconds: 5
+      square-circuit:
+        minimum-number-of-calls: 5
+        wait-duration-in-open-state:
+          seconds: 15
+        exponential-backoff-multiplier: 2.0
