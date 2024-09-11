@@ -1,0 +1,4 @@
+type Query {
+    movies: [Movie],
+    movie(title: String!): Movie
+}
