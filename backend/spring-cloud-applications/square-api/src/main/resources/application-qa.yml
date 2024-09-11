@@ -5,7 +5,7 @@ server:
   port: 9002
 
 welcome:
-    message: Welcome to default Square API
+    message: Welcome to QA Square API
 
 management:
   endpoints:
