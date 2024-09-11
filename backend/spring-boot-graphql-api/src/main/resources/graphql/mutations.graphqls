@@ -1,5 +1,6 @@
 type Mutation {
-    addMovie(title: String!, year: Int!, ratings: [RatingInput], actors: [String]): Movie
+    addMovie(title: String!, year: Int!, ratings: [RatingInput], actors: [String]): Movie,
+    removeMovie(title: String!): Movie
 }
 
 input RatingInput {
