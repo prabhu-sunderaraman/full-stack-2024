@@ -23,7 +23,7 @@
 * What happens here is when Praneeth completes his work and raises a PR to merge to dev, it will show a **CONFLICT**
 * The way to solve this is:
 * As soon as Swetha's PR gets merged to dev branch, message everyone in the team saying **Guys! please rebase your dev**
-* Praneeth has to save his work and run **git rebase** command before proceeding. So the conflicts, if any, will be resolved immediately
+* Praneeth has to save his work and run **git pull origin branch-name --rebase** command before proceeding. So the conflicts, if any, will be resolved immediately
 
 ## To Do
 
