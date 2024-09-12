@@ -14,3 +14,14 @@
 * After development is complete raise a PR (**Pull Request**)
 * After review, PR will be merged to dev and qa
 * Finally qa will be merged to main branch (with a versioning and tags)
+
+## Usual problems
+
+* Praneeth has created his branch ENG-1234 from dev on Thursday and he is working
+* In the meanwhile, Swetha has merged her work with dev branch;
+* So that means, Praneeth is working on codebase which is old
+* What happens here is when Praneeth completes his work and raises a PR to merge to dev, it will show a **CONFLICT**
+* The way to solve this is:
+* As soon as Swetha's PR gets merged to dev branch, message everyone in the team saying **Guys! please rebase your dev**
+* Praneeth has to save his work and run **git rebase** command before proceeding. So the conflicts, if any, will be resolved immediately
+
