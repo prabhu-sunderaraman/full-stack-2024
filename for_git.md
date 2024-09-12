@@ -25,3 +25,24 @@
 * As soon as Swetha's PR gets merged to dev branch, message everyone in the team saying **Guys! please rebase your dev**
 * Praneeth has to save his work and run **git rebase** command before proceeding. So the conflicts, if any, will be resolved immediately
 
+## To Do
+
+* Create a repo (say ipl)
+* Add a collaborator who can also contribute say Princy and Aishuwarya
+* From dev branch create two branches princy-1234 and aish-1234
+* Each one starts working with their branches; both are going to write a HelloWorld1.java and HelloWorld2.java
+* Princy complete it first, raise a PR and merge it with dev; and ask Aishuwarya to rebase
+* Aishuwarya needs to run rebase command and see Princy's code appearing as well
+* Then raise a PR and merge it with dev
+
+* Raise a PR from dev to qa
+* Finally raise a PR from qa to main
+
+
+
+
+
+
+
+
+
