@@ -192,10 +192,19 @@
 * If you have 3 partitions, 3 or less number of consumers is adequate. more than 3, you are wasting your resources
 * If you have 100 partitions, you can have 100 consumer instances and not more
 
+### Cloud
 
+* online database 
+* large amount of data can be stored
+* icloud, google drive, 
 
+### Building applications on the cloud 
 
-
+* Earlier applications were built using the libraries and frameworks or tech stack and pushed/hosted on the cloud
+* Over a period of time, the cloud providers became more and more popular and powerful that they started giving services exclusively for their customers
+* CNCF - cloud native
+* You create scripts or programs to provision infrastructure
+* Terraform or Ansible
 
 
 
