@@ -208,7 +208,19 @@
 
 
 
+### Questions for tomorrow's demo
 
+* Which design strategies were used in the microservices?
+* How was resiliency against databases designed in your project?
+* How was logging designed in your project, centralized logging, tracing?
+* Were there any single point of failures in the application architecture and how do you handle the same?
+* How did you handle authentication?
+* How did you ensure fault tolerance and prevent cascading failures in your microservices architecture?
+* What monitoring and alerting tools did you use to keep track of the health and performance of your microservices?
+* How did you handle monitoring of individual microservices and the overall system?
+* Were there any specific auto-scaling mechanisms or strategies employed?
+* Did you implement any distributed transaction patterns or rely on eventual consistency?
+* Did you use any API management tools or platforms to handle versioning, documentation, and access control?
  
 
 
