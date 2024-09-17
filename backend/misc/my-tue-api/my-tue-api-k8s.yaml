@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-tue-api-deployment
+  namespace: training
+  labels:
+    app: my-tue-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-tue-api
+  template:
+    metadata:
+      labels:
+        app: my-tue-api
+    spec:
+      containers:
+        - name: my-tue-api
+          image: prabhudev/indium:my-tue-api
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-tue-api-service
+  namespace: training
+spec:
+  selector:
+    app: my-tue-api
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 8080
