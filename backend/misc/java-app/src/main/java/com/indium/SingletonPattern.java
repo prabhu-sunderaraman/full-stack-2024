@@ -20,7 +20,7 @@ public class SingletonPattern {
 }
 
 //Singleton class
-class VendingMachine {
+final class VendingMachine {
     private static VendingMachine vendingMachine = new VendingMachine();
 
     private VendingMachine() {
